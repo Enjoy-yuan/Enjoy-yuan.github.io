@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="deploy" />
+
+
+<meta name="description" content="vue 自动化部署
+
+
+1.基本环境
+云服务器：centos7
+终端连接：ssh root@公网 ip
+mac 连接工具：finalshell
+windows 连接工具：xshell6
+ftp ..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    deploy |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                从全端到全栈
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="http://122.51.89.126/music" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                音乐</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="deploy">
+            
+            deploy
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/deploy/" rel="tag">deploy</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/05/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>vue 自动化部署</p>
+<a id="more"></a>
+
+<h2 id="1-基本环境"><a href="#1-基本环境" class="headerlink" title="1.基本环境"></a>1.基本环境</h2><ul>
+<li>云服务器：centos7</li>
+<li>终端连接：ssh root@公网 ip</li>
+<li>mac 连接工具：finalshell</li>
+<li>windows 连接工具：xshell6</li>
+<li>ftp 工具：FileZilla</li>
+<li>反向代理：nginx</li>
+<li>进程管理：pm2</li>
+</ul>
+<h2 id="2-基本命令"><a href="#2-基本命令" class="headerlink" title="2.基本命令"></a>2.基本命令</h2><ul>
+<li>查看本机 ip：ipconfig</li>
+<li>检查网络是否连通成功，ping xxx.xx.xxx.xxx(服务器 ip)</li>
+<li>检查域名是否解析成功，ping xx.xxxxxx.cn(域名)</li>
+<li>查看服务器开启的端口：netstat -ntpl</li>
+<li>关闭开启的端口：kill -9 xxxxx</li>
+<li>查看硬盘容量：fdisk -l | grep Disk</li>
+<li>查看内存：free -h</li>
+<li>安装基本依赖：yum -y install gcc pcre-devel zlib-devel openssl openssl-devel</li>
+</ul>
+<h2 id="3-安装-nginx"><a href="#3-安装-nginx" class="headerlink" title="3.安装 nginx"></a>3.安装 nginx</h2><ul>
+<li>下载安装包：nginx-1.9.9.tar.gz</li>
+<li>解压之后通过 ftp 工具放入/usr/local 目录下</li>
+<li>进入解压之后的文件夹 nginx-1.9.9</li>
+<li>依次运行命令生成 nginx 可启动文件：./configure –with-http_ssl_modul(配置 https 需要该模块)，make，make install</li>
+<li>输入./configure 报错：Permission denied(无权限)，加上 bash</li>
+<li>停止 nginx：/usr/local/nginx/sbin/nginx -s stop</li>
+<li>启动 nginx：/usr/local/nginx/sbin/nginx (-s reload)</li>
+<li>若端口被占用，可重启该端口，或先关闭该端口再启动</li>
+</ul>
+<h2 id="4-安全组和防火墙"><a href="#4-安全组和防火墙" class="headerlink" title="4.安全组和防火墙"></a>4.安全组和防火墙</h2><ul>
+<li>安全组必须添加 80 端口，否则 nginx 正常启动但是通过服务器地址无法访问</li>
+<li>当项目在其他端口启动时，同样需要在安全组添加相应的端口</li>
+<li>防火墙必须要关闭，否则通过服务器地址无法访问</li>
+<li>查看：systemctl status firewalld</li>
+<li>关闭：systemctl stop firewalld</li>
+<li>启动：systemctl start firewalld</li>
+</ul>
+<h2 id="5-启动-vue-项目生成的-dist-文件夹"><a href="#5-启动-vue-项目生成的-dist-文件夹" class="headerlink" title="5.启动 vue 项目生成的 dist 文件夹"></a>5.启动 vue 项目生成的 dist 文件夹</h2><ul>
+<li>将 dist 文件夹下的内容拷贝到/usr/local/nginx/html 目录下即可</li>
+<li>浏览器输入服务器地址即可访问，默认 80 端口</li>
+</ul>
+<h2 id="6-全局安装-node-环境"><a href="#6-全局安装-node-环境" class="headerlink" title="6.全局安装 node 环境"></a>6.全局安装 node 环境</h2><ul>
+<li>下载 node 压缩包：node-v10.16.3-linux-x64.tar.xz</li>
+<li>在目录/usr/local 下新建目录 node</li>
+<li>进入 node 目录，解压 node：tar -xvf node-v10.16.3-linux-x64.tar.xz</li>
+<li>配置全局 node 环境变量：ln -s /usr/local/node/node-v10.16.3-linux-x64/bin/node /usr/local/bin/node</li>
+<li>配置全局 npm 环境变量：ln -s /usr/local/node/node-v10.16.3-linux-x64/bin/npm /usr/local/bin/npm</li>
+<li>此时可执行 node -v，npm -v 查看版本号</li>
+<li>切换 cnpm：npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+<li>配置全局 cnpm 环境变量：ln -s /usr/local/node/node-v10.16.3-linux-x64/bin/cnpm /usr/local/bin/cnpm</li>
+</ul>
+<h2 id="7-安装-pm2"><a href="#7-安装-pm2" class="headerlink" title="7.安装 pm2"></a>7.安装 pm2</h2><ul>
+<li>全局安装 pm2：npm i pm2 -g</li>
+<li>配置全局 pm2 环境变量：ln -s /usr/local/node/node-v10.16.3-linux-x64/bin/pm2 /usr/local/bin/pm2</li>
+<li>此时可执行 pm2 -v 查看版本号</li>
+<li>查看启动的应用程序：pm2 list</li>
+<li>到项目根目录下启动并实时监听改动：pm2 start npm –name “tijian” – run start –watch</li>
+<li>关闭所有：pm2 stop all</li>
+<li>删除所有：pm2 delete all</li>
+<li>重启所有：pm2 restart all</li>
+</ul>
+<h2 id="8-启动-nuxt-项目"><a href="#8-启动-nuxt-项目" class="headerlink" title="8.启动 nuxt 项目"></a>8.启动 nuxt 项目</h2><ul>
+<li>在根目录下新建 project 目录，进入之后再新建 tijian 目录</li>
+<li>拷贝.nuxt nuxt.config package static(内含 favicon.ico 图标)</li>
+<li>安装依赖 npm/cnpm i</li>
+<li>启动：npm run start</li>
+<li>使用 pm2 启动：pm2 start npm –name “nuxt-tijian” – run start –watch</li>
+</ul>
+<h2 id="9-通过命令删除文件夹"><a href="#9-通过命令删除文件夹" class="headerlink" title="9.通过命令删除文件夹"></a>9.通过命令删除文件夹</h2><ul>
+<li>通过 ftp 删除 node_modules 很慢</li>
+<li>可通过命令删除：rm node_modules -rf</li>
+</ul>
+<h2 id="10-nginx-配置为-https"><a href="#10-nginx-配置为-https" class="headerlink" title="10.nginx 配置为 https"></a>10.nginx 配置为 https</h2><ul>
+<li>server 必须为 localhost:3000，保持与项目启动地址一致，不可使用 127.0.0.1:3000</li>
+<li>需要.pem 和.key 文件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">upstream tjnuxt &#123;</span><br><span class="line">    server localhost:<span class="number">3000</span>;</span><br><span class="line">    keepalive <span class="number">64</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  server &#123;</span><br><span class="line">    listen       <span class="number">443</span> ssl;</span><br><span class="line">    server_name  tijian.eshebao.cn;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      <span class="number">1683959</span>__eshebao.cn.pem;</span><br><span class="line">    ssl_certificate_key  <span class="number">1683959</span>__eshebao.cn.key;</span><br><span class="line">    ssl_session_cache    shared:SSL:<span class="number">1</span>m;</span><br><span class="line">    ssl_session_timeout  <span class="number">5</span>m;</span><br><span class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">      proxy_http_version <span class="number">1.1</span>;</span><br><span class="line">      proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">      proxy_set_header Connection <span class="string">"upgrade"</span>;</span><br><span class="line">      proxy_set_header Host $host;</span><br><span class="line">      proxy_set_header X-Nginx-<span class="built_in">Proxy</span> <span class="literal">true</span>;</span><br><span class="line">      proxy_cache_bypass $http_upgrade;</span><br><span class="line">      proxy_pass http:<span class="comment">//tjnuxt; #反向代理</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  server &#123;</span><br><span class="line">    listen       <span class="number">443</span> ssl;</span><br><span class="line">    server_name  user.eshebao.cn;</span><br><span class="line"></span><br><span class="line">    ssl_certificate      <span class="number">1683959</span>__eshebao.cn.pem;</span><br><span class="line">    ssl_certificate_key  <span class="number">1683959</span>__eshebao.cn.key;</span><br><span class="line">    ssl_session_cache    shared:SSL:<span class="number">1</span>m;</span><br><span class="line">    ssl_session_timeout  <span class="number">5</span>m;</span><br><span class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /project/user;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-将-http-重定向到-https"><a href="#11-将-http-重定向到-https" class="headerlink" title="11.将 http 重定向到 https"></a>11.将 http 重定向到 https</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># HTTP server 对http重定向到https</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  tijian.eshebao.cn;</span><br><span class="line">    rewrite ^(.*)$	https:<span class="comment">//tijian.eshebao.cn permanent;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  user.eshebao.cn;</span><br><span class="line">    rewrite ^(.*)$	https:<span class="comment">//user.eshebao.cn	permanent;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-设置静态路径，访问-img，pdf，mp4-等"><a href="#12-设置静态路径，访问-img，pdf，mp4-等" class="headerlink" title="12.设置静态路径，访问 img，pdf，mp4 等"></a>12.设置静态路径，访问 img，pdf，mp4 等</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    root   /img;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-添加域名解析"><a href="#13-添加域名解析" class="headerlink" title="13.添加域名解析"></a>13.添加域名解析</h2><ul>
+<li>进入域名-&gt;解析-&gt;新手引导/添加记录；输入公网 ip 地址</li>
+</ul>
+<h2 id="14-请求代理"><a href="#14-请求代理" class="headerlink" title="14.请求代理"></a>14.请求代理</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /api/ &#123;</span><br><span class="line">  proxy_pass http:<span class="comment">//music.163.com;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-history-模式"><a href="#15-history-模式" class="headerlink" title="15.history 模式"></a>15.history 模式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">  try_files $uri $uri/ <span class="regexp">/index.html;</span></span><br><span class="line"><span class="regexp">  root   /</span>project/user;</span><br><span class="line">  index  index.html index.htm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-nuxt-项目加-robots-防爬虫"><a href="#16-nuxt-项目加-robots-防爬虫" class="headerlink" title="16.nuxt 项目加 robots 防爬虫"></a>16.nuxt 项目加 robots 防爬虫</h2><ul>
+<li>将 robots 文件放入 static 文件夹之下，获取 static 文件夹内的内容使用/文件名</li>
+</ul>
+<h2 id="17-使用-github-的-webhook-实现自动部署"><a href="#17-使用-github-的-webhook-实现自动部署" class="headerlink" title="17.使用 github 的 webhook 实现自动部署"></a>17.使用 github 的 webhook 实现自动部署</h2><ul>
+<li>进入 github，找到需要自动部署的项目，添加 webhook</li>
+<li>输入请求 url：http://公网IP:8888/webhook(必须在云服务器安全组开启对应端口)</li>
+<li>输入 secret 密码，每次 push 可在 deliveries 中看到请求 url 是否执行成功</li>
+<li>npm init 创建 package.json，安装依赖包 npm install github-webhook-handler –save</li>
+<li>进入/project 目录，通过 ssh 连接来拉取 github 仓库代码，git clone ssh 链接</li>
+<li>新建文件夹，新建 ci.sh 文件，并写入脚本</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /project/<span class="keyword">try</span>-vue <span class="comment">// 进入项目目录</span></span><br><span class="line">git pull</span><br><span class="line">cnpm install</span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>新建 index.js，使用 node index.js 或 pm2 start index.js –name “webhook” – run start –watch 来启动 node 服务</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line"><span class="keyword">var</span> createHandler = <span class="built_in">require</span>(<span class="string">"github-webhook-handler"</span>);</span><br><span class="line"><span class="keyword">var</span> &#123; exec &#125; = <span class="built_in">require</span>(<span class="string">"child_process"</span>); <span class="comment">//node中子进程调用文件模块</span></span><br><span class="line"><span class="keyword">var</span> handler = createHandler(&#123;</span><br><span class="line">  path: <span class="string">"/webhook"</span>,</span><br><span class="line">  secret: <span class="string">"XXX"</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">http</span><br><span class="line">  .createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    handler(req, res, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">      res.statusCode = <span class="number">404</span>;</span><br><span class="line">      res.end(<span class="string">"no such location"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .listen(<span class="number">8888</span>);</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">"error"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.error(<span class="string">"Error:"</span>, err.message);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">"push"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(</span><br><span class="line">    <span class="string">"Received a push event for %s to %s"</span>,</span><br><span class="line">    event.payload.repository.name,</span><br><span class="line">    event.payload.ref</span><br><span class="line">  );</span><br><span class="line">  <span class="comment">// 执行`sh ci.sh`命令</span></span><br><span class="line">  exec(<span class="string">"sh ci.sh"</span>, (err, stdout, stderr) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(err);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(stdout);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">"issues"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(</span><br><span class="line">    <span class="string">"Received an issue event for %s action=%s: #%d %s"</span>,</span><br><span class="line">    event.payload.repository.name,</span><br><span class="line">    event.payload.action,</span><br><span class="line">    event.payload.issue.number,</span><br><span class="line">    event.payload.issue.title</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="18-nginx-配置-gzip-压缩"><a href="#18-nginx-配置-gzip-压缩" class="headerlink" title="18.nginx 配置 gzip 压缩"></a>18.nginx 配置 gzip 压缩</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gzip on;</span><br><span class="line">gzip_types text/plain application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg  image/gif image/png;</span><br></pre></td></tr></table></figure>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2019/06/01/nuxt/" class="pre-post btn btn-default" title='nuxt'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            nuxt</span>
+    </a>
+    
+    
+    <a href="/2019/04/01/performance/" class="next-post btn btn-default" title='performance'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            performance</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本环境"><span class="toc-text">1.基本环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-基本命令"><span class="toc-text">2.基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装-nginx"><span class="toc-text">3.安装 nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-安全组和防火墙"><span class="toc-text">4.安全组和防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-启动-vue-项目生成的-dist-文件夹"><span class="toc-text">5.启动 vue 项目生成的 dist 文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-全局安装-node-环境"><span class="toc-text">6.全局安装 node 环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-安装-pm2"><span class="toc-text">7.安装 pm2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-启动-nuxt-项目"><span class="toc-text">8.启动 nuxt 项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-通过命令删除文件夹"><span class="toc-text">9.通过命令删除文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-nginx-配置为-https"><span class="toc-text">10.nginx 配置为 https</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-将-http-重定向到-https"><span class="toc-text">11.将 http 重定向到 https</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-设置静态路径，访问-img，pdf，mp4-等"><span class="toc-text">12.设置静态路径，访问 img，pdf，mp4 等</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-添加域名解析"><span class="toc-text">13.添加域名解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-请求代理"><span class="toc-text">14.请求代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-history-模式"><span class="toc-text">15.history 模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-nuxt-项目加-robots-防爬虫"><span class="toc-text">16.nuxt 项目加 robots 防爬虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-使用-github-的-webhook-实现自动部署"><span class="toc-text">17.使用 github 的 webhook 实现自动部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-nginx-配置-gzip-压缩"><span class="toc-text">18.nginx 配置 gzip 压缩</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="interview" />
+
+
+<meta name="description" content="interview 面试题
+
+
+1.闭包
+MDN：闭包可以让你从内部函数访问外部函数作用域，函数在每次创建时生成闭包
+
+2.原型链
+MDN：每个实例对象都有一个私有属性（称之为 proto ）指..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    interview |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                从全端到全栈
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="http://122.51.89.126/music" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                音乐</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="interview">
+            
+            interview
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/interview/" rel="tag">interview</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/12/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>interview 面试题</p>
+<a id="more"></a>
+
+<h2 id="1-闭包"><a href="#1-闭包" class="headerlink" title="1.闭包"></a>1.闭包</h2><ul>
+<li>MDN：闭包可以让你从内部函数访问外部函数作用域，函数在每次创建时生成闭包</li>
+</ul>
+<h2 id="2-原型链"><a href="#2-原型链" class="headerlink" title="2.原型链"></a>2.原型链</h2><ul>
+<li>MDN：每个实例对象都有一个私有属性（称之为 <strong>proto</strong> ）指向它的构造函数的原型对象（prototype ）</li>
+<li>实践：在 vue 中，在 Vue 的原型上定义的变量和函数，在实例中可以通过 this 来访问</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出：666 555</span></span><br><span class="line">Vue.prototype.aaa = <span class="number">666</span>;</span><br><span class="line">Vue.prototype.fn = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">555</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.aaa);</span><br><span class="line"><span class="keyword">this</span>.fn();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：[] &#123;&#125; null []，__proto__属性等同于Object.getPrototypeOf方法</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(arr.__proto__.__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(arr.__proto__.__proto__.__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getPrototypeOf(arr));</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-跨域"><a href="#3-跨域" class="headerlink" title="3.跨域"></a>3.跨域</h2><ul>
+<li>MDN：如果两个页面的协议，主机，端口都相同时，称为同源，否则会产生跨域</li>
+<li>实践：vue 前端，node 后端，nginx 代理</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue前端设置代理跨域，vue.config.js</span></span><br><span class="line">devServer: &#123;</span><br><span class="line">  proxy: &#123;</span><br><span class="line">    <span class="string">"/api"</span>: &#123;</span><br><span class="line">      target: <span class="string">"http://music.163.com/api"</span>,</span><br><span class="line">      changeOrigin: <span class="literal">true</span>,</span><br><span class="line">      pathRewrite: &#123;</span><br><span class="line">        <span class="string">"^/api"</span>: <span class="string">"/"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// node使用cors设置接口跨域</span></span><br><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa()</span><br><span class="line"><span class="keyword">const</span> cors = <span class="built_in">require</span>(<span class="string">'koa2-cors'</span>)</span><br><span class="line">app.use(cors())</span><br><span class="line"></span><br><span class="line"><span class="comment">// nginx设置代理跨域</span></span><br><span class="line">location /api/ &#123;</span><br><span class="line">  proxy_pass http:<span class="comment">//music.163.com;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-对象的深拷贝和浅拷贝"><a href="#4-对象的深拷贝和浅拷贝" class="headerlink" title="4.对象的深拷贝和浅拷贝"></a>4.对象的深拷贝和浅拷贝</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出：</span></span><br><span class="line"><span class="comment">// &#123; a: 1, b: &#123; c: 1 &#125; &#125;</span></span><br><span class="line"><span class="comment">// &#123; a: 0, b: &#123; c: 1 &#125; &#125;</span></span><br><span class="line"><span class="comment">// &#123; a: 0, b: &#123; c: 1 &#125; &#125;</span></span><br><span class="line"><span class="comment">// &#123; a: 0, b: &#123; c: 0 &#125; &#125;</span></span><br><span class="line"><span class="comment">// &#123; a: 0, b: &#123; c: 0 &#125; &#125;</span></span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;</span><br><span class="line">  a: <span class="number">0</span>,</span><br><span class="line">  b: &#123;</span><br><span class="line">    c: <span class="number">0</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = obj1; <span class="comment">// 浅拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj3 = &#123; ...obj1 &#125;; <span class="comment">// 一级属性深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj4 = <span class="built_in">Object</span>.assign(&#123;&#125;, obj1); <span class="comment">// 一级属性深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj5 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj1)); <span class="comment">// 深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj6 = &#123; ...obj1, <span class="attr">b</span>: &#123; ...obj1.b &#125; &#125;; <span class="comment">// 二级属性深拷贝</span></span><br><span class="line">obj1.a = <span class="number">1</span>;</span><br><span class="line">obj1.b.c = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj2);</span><br><span class="line"><span class="built_in">console</span>.log(obj3);</span><br><span class="line"><span class="built_in">console</span>.log(obj4);</span><br><span class="line"><span class="built_in">console</span>.log(obj5);</span><br><span class="line"><span class="built_in">console</span>.log(obj6);</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-事件循环-Event-Loop"><a href="#5-事件循环-Event-Loop" class="headerlink" title="5.事件循环 Event Loop"></a>5.事件循环 Event Loop</h2><ul>
+<li>宏任务：setTimeout setInterval I/O script</li>
+<li>微任务：promise 的回调函数，process.nextTick</li>
+<li>微任务队列先执行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出2 4 3 1</span></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">  resolve();</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出7 6 8 9 11 10 12 2 4 3 5</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"2"</span>);</span><br><span class="line">  process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"3"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"4"</span>);</span><br><span class="line">    resolve();</span><br><span class="line">  &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"5"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;, <span class="number">2000</span>);</span><br><span class="line">process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"6"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"7"</span>);</span><br><span class="line">  resolve();</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"8"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"9"</span>);</span><br><span class="line">  process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"10"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"11"</span>);</span><br><span class="line">    resolve();</span><br><span class="line">  &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"12"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-this"><a href="#6-this" class="headerlink" title="6.this"></a>6.this</h2><ul>
+<li>MDN：指向当前执行代码的环境对象</li>
+<li>在浏览器环境中，默认指向 window</li>
+<li>在箭头函数中，指向定义时所在的对象，而不是执行时的对象</li>
+<li>使用 new 实例化对象，在构造函数中的 this 指向实例化对象</li>
+<li>可使用 call，apply，bind 来绑定 this</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出：2 6 7</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">e1, e2</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.a&#125;</span> <span class="subst">$&#123;e1&#125;</span> <span class="subst">$&#123;e2&#125;</span> `</span>);</span><br><span class="line">&#125;</span><br><span class="line">f.call(obj, <span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line">f.apply(obj, [<span class="number">6</span>, <span class="number">7</span>]);</span><br><span class="line">f.bind(obj)(<span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出222 111 222</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">111</span>;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a: <span class="number">222</span>,</span><br><span class="line">  test: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(that.a);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  test2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">obj.test()();</span><br><span class="line">obj.test2()();</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-类数组对象"><a href="#7-类数组对象" class="headerlink" title="7.类数组对象"></a>7.类数组对象</h2><ul>
+<li>MDN：类似数组的对象，拥有 length 属性</li>
+<li>产生条件：arguments，document.getElementsByTagName()，new Set()</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类数组对象转数组，输出：</span></span><br><span class="line"><span class="comment">// [ 1, 2, &lt;1 empty item&gt;, 4 ]</span></span><br><span class="line"><span class="comment">// [ 1, 2, &lt;1 empty item&gt;, 4 ]</span></span><br><span class="line"><span class="comment">// [ 1, 2, undefined, 4 ]</span></span><br><span class="line"><span class="comment">// [ 1, 2, 3, 4 ]</span></span><br><span class="line"><span class="comment">// arr4报错，arrayLike不可迭代，Set结构可迭代</span></span><br><span class="line"><span class="keyword">const</span> arrayLike = &#123; <span class="number">0</span>: <span class="number">1</span>, <span class="number">1</span>: <span class="number">2</span>, <span class="number">3</span>: <span class="number">4</span>, <span class="attr">length</span>: <span class="number">4</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> arr1 = <span class="built_in">Array</span>.prototype.slice.call(arrayLike);</span><br><span class="line"><span class="keyword">let</span> arr2 = [].slice.call(arrayLike);</span><br><span class="line"><span class="keyword">let</span> arr3 = <span class="built_in">Array</span>.from(arrayLike);</span><br><span class="line"><span class="comment">// let arr4 = [...arrayLike];</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1);</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr3);</span><br><span class="line"><span class="comment">// console.log(arr4);</span></span><br><span class="line"><span class="built_in">console</span>.log([...new <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>])]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：[Arguments] &#123; '0': 1, '1': 2, '2': 3 &#125; 6</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">    sum += <span class="built_in">arguments</span>[i];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(sum);</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-原型继承"><a href="#8-原型继承" class="headerlink" title="8.原型继承"></a>8.原型继承</h2><ul>
+<li>Dog 继承 Animal 的所有属性和方法</li>
+<li>原型继承缺点：所有实例共用同一个原型，会相互影响</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出：animal jack true true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">"jack"</span>;</span><br><span class="line">&#125;</span><br><span class="line">Animal.prototype.animalSpeak = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"animal"</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Dog.prototype = <span class="keyword">new</span> Animal();</span><br><span class="line"><span class="keyword">let</span> newDog = <span class="keyword">new</span> Dog();</span><br><span class="line">newDog.animalSpeak();</span><br><span class="line"><span class="built_in">console</span>.log(newDog.name);</span><br><span class="line"><span class="built_in">console</span>.log(newDog <span class="keyword">instanceof</span> Dog);</span><br><span class="line"><span class="built_in">console</span>.log(newDog <span class="keyword">instanceof</span> Animal);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用class实现</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"jack"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  animalSpeak() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"animal"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="keyword">super</span>(name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> newDog = <span class="keyword">new</span> Dog();</span><br><span class="line">newDog.animalSpeak();</span><br><span class="line"><span class="built_in">console</span>.log(newDog.name);</span><br><span class="line"><span class="built_in">console</span>.log(newDog <span class="keyword">instanceof</span> Dog);</span><br><span class="line"><span class="built_in">console</span>.log(newDog <span class="keyword">instanceof</span> Animal);</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-new-操作符的作用"><a href="#9-new-操作符的作用" class="headerlink" title="9.new 操作符的作用"></a>9.new 操作符的作用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = <span class="keyword">new</span> Base();</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj._proto_ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-盒模型"><a href="#10-盒模型" class="headerlink" title="10.盒模型"></a>10.盒模型</h2><ul>
+<li>标准盒模型：width = content；box-sizing: content-box;</li>
+<li>IE 盒模型：width = content + padding + border；box-sizing: border-box;</li>
+</ul>
+<h2 id="11-水平垂直居中"><a href="#11-水平垂直居中" class="headerlink" title="11.水平垂直居中"></a>11.水平垂直居中</h2><ul>
+<li>直接在父元素上设置 flex 布局，并设置子元素水平垂直居中</li>
+<li>在父元素上设置 flex 布局，在子元素上设置 margin: auto;</li>
+<li>使用子绝父相，通过 translate 移动子元素</li>
+</ul>
+<h2 id="12-块级格式上下文-BFC"><a href="#12-块级格式上下文-BFC" class="headerlink" title="12.块级格式上下文 BFC"></a>12.块级格式上下文 BFC</h2><ul>
+<li>定义：一个隔离的独立容器，容器内的子元素不会影响外面的元素</li>
+<li>常用创建 BFC：设置 position: absolute;或者 display: flex;或者 overflow: hidden;</li>
+<li>BFC 的作用：避免相邻的 Box margin 重叠</li>
+</ul>
+<h2 id="13-防抖"><a href="#13-防抖" class="headerlink" title="13.防抖"></a>13.防抖</h2><h2 id="14-节流"><a href="#14-节流" class="headerlink" title="14.节流"></a>14.节流</h2><h2 id="15-数据类型"><a href="#15-数据类型" class="headerlink" title="15.数据类型"></a>15.数据类型</h2><ul>
+<li>基本类型：undefined，null，string，number，boolean，symbol，bigInt</li>
+<li>引用类型：object</li>
+<li>基本类型存放在栈中，引用类型同时存放在栈和堆中，栈中保存变量标识符和指针</li>
+<li>引用类型存放地址不同，不能直接比较是否相等，可以使用 String()先将它们转成字符串再来比较</li>
+</ul>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2020/01/01/dotfile/" class="pre-post btn btn-default" title='dotfile'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            dotfile</span>
+    </a>
+    
+    
+    <a href="/2019/11/01/javascript/" class="next-post btn btn-default" title='javascript'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            javascript</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-闭包"><span class="toc-text">1.闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-原型链"><span class="toc-text">2.原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-跨域"><span class="toc-text">3.跨域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-对象的深拷贝和浅拷贝"><span class="toc-text">4.对象的深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-事件循环-Event-Loop"><span class="toc-text">5.事件循环 Event Loop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-this"><span class="toc-text">6.this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-类数组对象"><span class="toc-text">7.类数组对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-原型继承"><span class="toc-text">8.原型继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-new-操作符的作用"><span class="toc-text">9.new 操作符的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-盒模型"><span class="toc-text">10.盒模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-水平垂直居中"><span class="toc-text">11.水平垂直居中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-块级格式上下文-BFC"><span class="toc-text">12.块级格式上下文 BFC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-防抖"><span class="toc-text">13.防抖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-节流"><span class="toc-text">14.节流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-数据类型"><span class="toc-text">15.数据类型</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

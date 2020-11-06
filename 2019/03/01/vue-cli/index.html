@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="vue-cli" />
+
+
+<meta name="description" content="vue-cli 配置
+
+
+1.设置启动项目时自动打开浏览器12// config/index.jsautoOpenBrowser: true,
+
+2.设置 api 代理12345678910//..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    vue-cli |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                从全端到全栈
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="http://122.51.89.126/music" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                音乐</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="vue-cli">
+            
+            vue-cli
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/vue-cli/" rel="tag">vue-cli</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/03/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>vue-cli 配置</p>
+<a id="more"></a>
+
+<h2 id="1-设置启动项目时自动打开浏览器"><a href="#1-设置启动项目时自动打开浏览器" class="headerlink" title="1.设置启动项目时自动打开浏览器"></a>1.设置启动项目时自动打开浏览器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/index.js</span></span><br><span class="line">autoOpenBrowser: <span class="literal">true</span>,</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-设置-api-代理"><a href="#2-设置-api-代理" class="headerlink" title="2.设置 api 代理"></a>2.设置 api 代理</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/index.js</span></span><br><span class="line">proxyTable: &#123;</span><br><span class="line">  <span class="string">'/api'</span>: &#123;</span><br><span class="line">    target: <span class="string">'https://xxx.cn/'</span>,</span><br><span class="line">    changeOrigin: <span class="literal">true</span>,</span><br><span class="line">    pathRewrite: &#123;</span><br><span class="line">      <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-给-img-文件夹配置别名"><a href="#3-给-img-文件夹配置别名" class="headerlink" title="3.给 img 文件夹配置别名"></a>3.给 img 文件夹配置别名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.base.conf.js</span></span><br><span class="line"><span class="string">'@img'</span>: resolve(<span class="string">'src/assets/img'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-打包之后打开-index-html-页面空白"><a href="#4-打包之后打开-index-html-页面空白" class="headerlink" title="4.打包之后打开 index.html 页面空白"></a>4.打包之后打开 index.html 页面空白</h2><ul>
+<li>当 vue-router 使用 history 的时候不用加点</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/index.js</span></span><br><span class="line">build&#123;</span><br><span class="line">  assetsPublicPath: <span class="string">'./'</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-打包之后-app-vue-中引入以及写入的-css-样式未生效"><a href="#5-打包之后-app-vue-中引入以及写入的-css-样式未生效" class="headerlink" title="5.打包之后 app.vue 中引入以及写入的 css 样式未生效"></a>5.打包之后 app.vue 中引入以及写入的 css 样式未生效</h2><ul>
+<li>不要在 app.vue 中写 css</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js中的样式会覆盖app.vue中引入的样式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"./assets/css/index.scss"</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-打包之后-element-ui-图标资源加载失败"><a href="#6-打包之后-element-ui-图标资源加载失败" class="headerlink" title="6.打包之后 element-ui 图标资源加载失败"></a>6.打包之后 element-ui 图标资源加载失败</h2><ul>
+<li>添加 publicPath: ‘../../‘</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/utils.js</span></span><br><span class="line"><span class="keyword">if</span> (options.extract) &#123;</span><br><span class="line">  <span class="keyword">return</span> ExtractTextPlugin.extract(&#123;</span><br><span class="line">    use: loaders,</span><br><span class="line">    fallback: <span class="string">"vue-style-loader"</span>,</span><br><span class="line">    publicPath: <span class="string">"../../"</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> [<span class="string">"vue-style-loader"</span>].concat(loaders);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-打包之后-iconfont-在线引入报错"><a href="#7-打包之后-iconfont-在线引入报错" class="headerlink" title="7.打包之后 iconfont 在线引入报错"></a>7.打包之后 iconfont 在线引入报错</h2><ul>
+<li>下载 iconfont.js，在 main.js 中引入</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.html</span></span><br><span class="line"><span class="comment">// &lt;script src="//at.alicdn.com/t/font_1271809_2gp2blrwaih.js"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="8-打包之后显示静态页面无法或获取数据"><a href="#8-打包之后显示静态页面无法或获取数据" class="headerlink" title="8.打包之后显示静态页面无法或获取数据"></a>8.打包之后显示静态页面无法或获取数据</h2><ul>
+<li>在 axios 中配置 api 前缀 baseURL</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/require.js</span></span><br><span class="line"><span class="keyword">const</span> service = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">"https://xxx.cn/"</span>, <span class="comment">// url = base url + request url</span></span><br><span class="line">  timeout: <span class="number">8000</span> <span class="comment">// request timeout</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-打包之后去掉-map-文件"><a href="#9-打包之后去掉-map-文件" class="headerlink" title="9.打包之后去掉 .map 文件"></a>9.打包之后去掉 .map 文件</h2><ul>
+<li>build 打包时间从 31s 减少到 27s</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/index.js</span></span><br><span class="line">productionSourceMap: <span class="literal">false</span>,</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-查看打包之后各文件的体积"><a href="#10-查看打包之后各文件的体积" class="headerlink" title="10.查看打包之后各文件的体积"></a>10.查看打包之后各文件的体积</h2><ul>
+<li>npm run build –report</li>
+</ul>
+<h2 id="11-使用命名式路由懒加载"><a href="#11-使用命名式路由懒加载" class="headerlink" title="11.使用命名式路由懒加载"></a>11.使用命名式路由懒加载</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.dev.conf.js</span></span><br><span class="line">output: &#123;</span><br><span class="line">  path: config.build.assetsRoot,</span><br><span class="line">  filename: utils.assetsPath(<span class="string">'js/[name].[chunkhash].js'</span>),</span><br><span class="line">  chunkFilename: utils.assetsPath(<span class="string">'js/[id].[chunkhash].js'</span>),</span><br><span class="line">  chunkFilename: <span class="string">'router-[name].js'</span>, <span class="comment">// 添加此行</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// router/index.js</span></span><br><span class="line">component: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>( <span class="comment">/* webpackChunkName: "home" */</span> <span class="string">'@/pages'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-开启-gzip-压缩（8s-2s）"><a href="#12-开启-gzip-压缩（8s-2s）" class="headerlink" title="12.开启 gzip 压缩（8s-2s）"></a>12.开启 gzip 压缩（8s-2s）</h2><ul>
+<li>安装依赖：cnpm install –save-dev <a href="mailto:compression-webpack-plugin@1.1.2">compression-webpack-plugin@1.1.2</a>(版本过高 build 时会报错)</li>
+<li>首屏从 8s 降低到 2s，性价比最高</li>
+<li>修改配置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/index.js</span></span><br><span class="line">productionGzip: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line"><span class="comment">// build/webpack.prod.conf.js 将asset替换成filename</span></span><br><span class="line"><span class="comment">// asset: '[path].gz[query]',</span></span><br><span class="line">filename: <span class="string">'[path].gz[query]'</span>,</span><br><span class="line"></span><br><span class="line"><span class="comment">// nginx配置</span></span><br><span class="line">gzip on;</span><br><span class="line">gzip_types text/plain application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg  image/gif image/png;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>npm run build 之后</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span>/js/vendor<span class="number">.9</span>fd7869f1da6dd02362e.js     <span class="number">826</span> kB       <span class="number">5</span>  [emitted]  [big]  vendor</span><br><span class="line">               <span class="keyword">static</span>/fonts/element-icons<span class="number">.535877</span>f.woff    <span class="number">28.2</span> kB          [emitted]</span><br><span class="line">                                       router-music.js    <span class="number">3.77</span> kB       <span class="number">0</span>  [emitted]         music</span><br><span class="line">                                       router-movie.js  <span class="number">430</span> bytes       <span class="number">1</span>  [emitted]         movie</span><br><span class="line">                                       router-photo.js  <span class="number">372</span> bytes       <span class="number">2</span>  [emitted]         photo</span><br><span class="line">                                        router-home.js    <span class="number">2.79</span> kB       <span class="number">3</span>  [emitted]         home</span><br><span class="line">                                        router-book.js  <span class="number">369</span> bytes       <span class="number">4</span>  [emitted]         book</span><br><span class="line">                <span class="keyword">static</span>/fonts/element-icons<span class="number">.732389</span>d.ttf      <span class="number">56</span> kB          [emitted]</span><br><span class="line">                 <span class="keyword">static</span>/js/app<span class="number">.36</span>cec2ff77290db0d45b.js    <span class="number">1.14</span> kB       <span class="number">6</span>  [emitted]         app</span><br><span class="line">            <span class="keyword">static</span>/js/manifest.d7729233a0614fd5a64b.js    <span class="number">1.42</span> kB       <span class="number">7</span>  [emitted]         manifest</span><br><span class="line">   <span class="keyword">static</span>/css/app.db335b540de0fe17b5dd953bf51481fa.css     <span class="number">299</span> kB       <span class="number">6</span>  [emitted]  [big]  app</span><br><span class="line">                                            index.html  <span class="number">576</span> bytes          [emitted]</span><br><span class="line">                                       <span class="keyword">static</span>/logo.png    <span class="number">6.85</span> kB          [emitted]</span><br><span class="line"><span class="keyword">static</span>/css/app.db335b540de0fe17b5dd953bf51481fa.css.gz    <span class="number">44.7</span> kB          [emitted]</span><br><span class="line">           <span class="keyword">static</span>/js/vendor<span class="number">.9</span>fd7869f1da6dd02362e.js.gz     <span class="number">222</span> kB          [emitted]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在 network 中点击 app.db335b540de0fe17b5dd953bf51481fa.css 或 vendor.9fd7869f1da6dd02362e.js 在响应头中找到 Content-Encoding: gzip 说明开启 Gzip 成功</li>
+</ul>
+<h2 id="13-图片压缩-报错"><a href="#13-图片压缩-报错" class="headerlink" title="13.图片压缩(报错)"></a>13.图片压缩(报错)</h2><ul>
+<li>安装依赖：cnpm install image-webpack-loader –save-dev</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.base.conf.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// loader: 'url-loader',</span></span><br><span class="line"><span class="comment">// options: &#123;</span></span><br><span class="line"><span class="comment">//   limit: 10000,</span></span><br><span class="line"><span class="comment">//   name: utils.assetsPath('img/[name].[hash:7].[ext]')</span></span><br><span class="line"><span class="comment">// &#125;,</span></span><br><span class="line">use: [</span><br><span class="line">  <span class="string">'file-loader'</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    loader: <span class="string">'image-webpack-loader'</span>,</span><br><span class="line">    options: &#123;</span><br><span class="line">      mozjpeg: &#123;</span><br><span class="line">        progressive: <span class="literal">true</span>,</span><br><span class="line">        quality: <span class="number">65</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// optipng.enabled: false will disable optipng</span></span><br><span class="line">      optipng: &#123;</span><br><span class="line">        enabled: <span class="literal">false</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      pngquant: &#123;</span><br><span class="line">        quality: [<span class="number">0.65</span>, <span class="number">0.90</span>],</span><br><span class="line">        speed: <span class="number">4</span></span><br><span class="line">      &#125;,</span><br><span class="line">      gifsicle: &#123;</span><br><span class="line">        interlaced: <span class="literal">false</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// the webp option will enable WEBP</span></span><br><span class="line">      webp: &#123;</span><br><span class="line">        quality: <span class="number">75</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<h2 id="14-加-title-前的小图标"><a href="#14-加-title-前的小图标" class="headerlink" title="14.加 title 前的小图标"></a>14.加 title 前的小图标</h2><ul>
+<li>将图标放入 static 文件夹，在 index.html 内引入</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"static/favicon.ico"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="15-性能分析-Hiper-失效"><a href="#15-性能分析-Hiper-失效" class="headerlink" title="15.性能分析 Hiper(失效)"></a>15.性能分析 Hiper(失效)</h2><ul>
+<li>全局安装：npm install hiper -g</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用</span></span><br><span class="line">hiper baidu.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-配置开发环境和生产环境不同-API-接口"><a href="#16-配置开发环境和生产环境不同-API-接口" class="headerlink" title="16.配置开发环境和生产环境不同 API 接口"></a>16.配置开发环境和生产环境不同 API 接口</h2><ul>
+<li>本地启动打印 development_api，线上环境打印 production_api</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/dev.env.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = merge(prodEnv, &#123;</span><br><span class="line">  NODE_ENV: <span class="string">'"development"'</span>,</span><br><span class="line">  BASE_API: <span class="string">'"development_api"'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// config/prod.env.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  NODE_ENV: <span class="string">'"production"'</span>,</span><br><span class="line">  BASE_API: <span class="string">'"production_api"'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在js或vue文件中打印</span></span><br><span class="line"><span class="built_in">console</span>.log(process.env.BASE_API);</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-开启-CDN-加速（2s-0-5s）"><a href="#17-开启-CDN-加速（2s-0-5s）" class="headerlink" title="17.开启 CDN 加速（2s-0.5s）"></a>17.开启 CDN 加速（2s-0.5s）</h2><ul>
+<li>使用免费 CDN：bootcdn</li>
+<li>css 影响很小可以忽略，不需要使用 CDN 加速</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// build/webpack.base.conf.js module.exports中添加</span></span><br><span class="line">  externals:&#123;</span><br><span class="line">    <span class="string">'vue'</span>: <span class="string">'Vue'</span>,</span><br><span class="line">    <span class="string">'vue-router'</span>: <span class="string">'VueRouter'</span>,</span><br><span class="line">    <span class="string">'axios'</span>: <span class="string">'axios'</span>,</span><br><span class="line">    <span class="string">'element-ui'</span>: <span class="string">'ELEMENT'</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// index.html body底部插入</span></span><br><span class="line">  &lt;script src=<span class="string">"https://cdn.bootcss.com/vue/2.6.10/vue.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;script src=<span class="string">"https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;script src=<span class="string">"https://cdn.bootcss.com/axios/0.19.0/axios.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;script src=<span class="string">"https://cdn.bootcss.com/element-ui/2.12.0/index.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 加速前</span></span><br><span class="line">Time: <span class="number">51616</span>ms</span><br><span class="line"> router-photo.js    <span class="number">4.08</span> kB       <span class="number">0</span>  [emitted]         photo</span><br><span class="line">              <span class="keyword">static</span>/js/vendor<span class="number">.9</span>fd7869f1da6dd02362e.js     <span class="number">826</span> kB       <span class="number">5</span>  [emitted]  [big]  vendor</span><br><span class="line">           <span class="keyword">static</span>/js/vendor<span class="number">.9</span>fd7869f1da6dd02362e.js.gz     <span class="number">222</span> kB          [emitted]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加速后</span></span><br><span class="line">Time: <span class="number">17267</span>ms</span><br><span class="line">                 <span class="keyword">static</span>/js/vendor.dae4f5a480e0aa07bcf9.js  <span class="number">803</span> bytes       <span class="number">6</span>  [emitted]         vendor</span><br></pre></td></tr></table></figure>
+
+<h2 id="18-vue-cli3-的配置"><a href="#18-vue-cli3-的配置" class="headerlink" title="18.vue-cli3 的配置"></a>18.vue-cli3 的配置</h2><ul>
+<li>配置集中到了一个文件，页面加载速度变化不大</li>
+<li>如果页面中存在 console，默认在 build 打包的时候会报 eslint 错误</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="keyword">const</span> CompressionWebpackPlugin = <span class="built_in">require</span>(<span class="string">"compression-webpack-plugin"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  productionSourceMap: <span class="literal">false</span>, <span class="comment">// build时不生成.map文件</span></span><br><span class="line">  configureWebpack: <span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 配置CDN加速</span></span><br><span class="line">    config.externals = &#123;</span><br><span class="line">      vue: <span class="string">"Vue"</span>,</span><br><span class="line">      <span class="string">"vue-router"</span>: <span class="string">"VueRouter"</span>,</span><br><span class="line">      axios: <span class="string">"axios"</span>,</span><br><span class="line">      <span class="string">"element-ui"</span>: <span class="string">"ELEMENT"</span>,</span><br><span class="line">      Vuex: <span class="string">"Vuex"</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 生产环境才生效</span></span><br><span class="line">    <span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">"production"</span>) &#123;</span><br><span class="line">      <span class="comment">// 配置gzip压缩</span></span><br><span class="line">      config.plugins.push(</span><br><span class="line">        <span class="keyword">new</span> CompressionWebpackPlugin(&#123;</span><br><span class="line">          <span class="comment">// 正在匹配需要压缩的文件后缀</span></span><br><span class="line">          test: <span class="regexp">/\.(js|css|svg|woff|ttf|json|html)$/</span>,</span><br><span class="line">          <span class="comment">// 大于10kb的会压缩</span></span><br><span class="line">          threshold: <span class="number">10240</span></span><br><span class="line">          <span class="comment">// 删除原文件，加此行报错 Unexpected token '&lt;'</span></span><br><span class="line">          <span class="comment">// deleteOriginalAssets: true</span></span><br><span class="line">        &#125;)</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    <span class="comment">// 设置api跨域代理</span></span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="string">"/api"</span>: &#123;</span><br><span class="line">        target: <span class="string">"http://music.163.com/api"</span>,</span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">"^/api"</span>: <span class="string">"/"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// .eslintrc.js rules中需要加入</span></span><br><span class="line"><span class="string">"no-console"</span>: <span class="string">"off"</span>, <span class="comment">// 有console.log不报错</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="19-vue-cli3-多环境配置"><a href="#19-vue-cli3-多环境配置" class="headerlink" title="19.vue-cli3 多环境配置"></a>19.vue-cli3 多环境配置</h2><ul>
+<li>新建文件：.env.development，.env.qa，.env.staging，.env.production</li>
+<li>在 vue 或 js 文件中使用：process.env.VUE_APP_BaseUrl</li>
+<li>也可以通过判断域名设置不同的 api 前缀，并将其全局挂载到 Vue 的实例上</li>
+<li>只在用 npm run build 时，才会生成 css 文件，并开启 gzip</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .env.development(npm run dev-build 将应用此配置)</span></span><br><span class="line">NODE_ENV=development</span><br><span class="line">VUE_APP_BaseUrl=http:<span class="comment">//192.168.30.130:8959/api/v1.0/</span></span><br><span class="line">VUE_APP_BaseUrl2=http:<span class="comment">//dev.app2.yourserver.com</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// .env.production(npm run build 将应用此配置)</span></span><br><span class="line">NODE_ENV=production</span><br><span class="line">VUE_APP_BaseUrl=http:<span class="comment">//dev.app2.yourserver.com</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">  <span class="string">"serve"</span>: <span class="string">"vue-cli-service serve"</span>,</span><br><span class="line">  <span class="string">"dev-build"</span>: <span class="string">"vue-cli-service build --mode development"</span>,</span><br><span class="line">  <span class="string">"qa-build"</span>: <span class="string">"vue-cli-service build --mode qa"</span>,</span><br><span class="line">  <span class="string">"staging-build"</span>: <span class="string">"vue-cli-service build --mode staging"</span>,</span><br><span class="line">  <span class="string">"build"</span>: <span class="string">"vue-cli-service build"</span>,</span><br><span class="line">  <span class="string">"lint"</span>: <span class="string">"vue-cli-service lint"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2019/04/01/performance/" class="pre-post btn btn-default" title='performance'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            performance</span>
+    </a>
+    
+    
+    <a href="/2019/02/01/hexo/" class="next-post btn btn-default" title='hexo'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            hexo</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-设置启动项目时自动打开浏览器"><span class="toc-text">1.设置启动项目时自动打开浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-设置-api-代理"><span class="toc-text">2.设置 api 代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-给-img-文件夹配置别名"><span class="toc-text">3.给 img 文件夹配置别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-打包之后打开-index-html-页面空白"><span class="toc-text">4.打包之后打开 index.html 页面空白</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-打包之后-app-vue-中引入以及写入的-css-样式未生效"><span class="toc-text">5.打包之后 app.vue 中引入以及写入的 css 样式未生效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-打包之后-element-ui-图标资源加载失败"><span class="toc-text">6.打包之后 element-ui 图标资源加载失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-打包之后-iconfont-在线引入报错"><span class="toc-text">7.打包之后 iconfont 在线引入报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-打包之后显示静态页面无法或获取数据"><span class="toc-text">8.打包之后显示静态页面无法或获取数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-打包之后去掉-map-文件"><span class="toc-text">9.打包之后去掉 .map 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-查看打包之后各文件的体积"><span class="toc-text">10.查看打包之后各文件的体积</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-使用命名式路由懒加载"><span class="toc-text">11.使用命名式路由懒加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-开启-gzip-压缩（8s-2s）"><span class="toc-text">12.开启 gzip 压缩（8s-2s）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-图片压缩-报错"><span class="toc-text">13.图片压缩(报错)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-加-title-前的小图标"><span class="toc-text">14.加 title 前的小图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-性能分析-Hiper-失效"><span class="toc-text">15.性能分析 Hiper(失效)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-配置开发环境和生产环境不同-API-接口"><span class="toc-text">16.配置开发环境和生产环境不同 API 接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-开启-CDN-加速（2s-0-5s）"><span class="toc-text">17.开启 CDN 加速（2s-0.5s）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-vue-cli3-的配置"><span class="toc-text">18.vue-cli3 的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-vue-cli3-多环境配置"><span class="toc-text">19.vue-cli3 多环境配置</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

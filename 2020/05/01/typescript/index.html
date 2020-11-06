@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="typescript" />
+
+
+<meta name="description" content="typescript 学习
+
+
+1.基础
+全局安装：npm install typescript -g
+查看版本号：tsc -v
+编译：tsc greeter.ts
+初始化生成 tsconfig..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    typescript |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                从全端到全栈
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="http://122.51.89.126/music" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                音乐</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="typescript">
+            
+            typescript
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/typescript/" rel="tag">typescript</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2020/05/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>typescript 学习</p>
+<a id="more"></a>
+
+<h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h2><ul>
+<li>全局安装：npm install typescript -g</li>
+<li>查看版本号：tsc -v</li>
+<li>编译：tsc greeter.ts</li>
+<li>初始化生成 tsconfig.json：tsc –init</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类的示例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Site</span> </span>&#123;</span><br><span class="line">  name(): <span class="keyword">void</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Runoob"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Site();</span><br><span class="line">obj.name();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 编译后</span></span><br><span class="line"><span class="keyword">var</span> Site = <span class="comment">/** @class */</span> (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Site</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">  Site.prototype.name = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> Site;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Site();</span><br><span class="line">obj.name();</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-基础类型"><a href="#2-基础类型" class="headerlink" title="2.基础类型"></a>2.基础类型</h2><ul>
+<li>布尔值：boolean</li>
+<li>数值：number</li>
+<li>字符串：string</li>
+<li>数组：number[]/Array<number></li>
+<li>元组：[string, number],已知元素数量和类型的数组</li>
+<li>枚举：enum Color {Red = 1, Green, Blue}，为数字赋名字，默认从 0 开始</li>
+<li>any：任意类型的值</li>
+<li>void：只能为它赋予 undefined 或 null，定义函数无返回值</li>
+<li>null：对象值缺失，空对象的引用</li>
+<li>undefined：初始化未定义</li>
+<li>never：类型表示的是那些永不存在的值的类型</li>
+<li>object：非原始类型</li>
+<li>｜：联合类型</li>
+<li>类型断言：可使用尖括号或 as，在 jsx 中只能使用 as</li>
+</ul>
+<h2 id="3-tsconfig-js-文件"><a href="#3-tsconfig-js-文件" class="headerlink" title="3.tsconfig.js 文件"></a>3.tsconfig.js 文件</h2><p>compilerOptions：编译器选项</p>
+<ul>
+<li>outDir：输出目录</li>
+<li>allowJs：是否允许 js，jsx 文件被包含</li>
+<li>target：编译后降级的版本</li>
+<li>compileOnSave：是否让 IDE 在保存文件的时候重新生成文件</li>
+<li>experimentalDecorators：是否启用实验阶段的装饰器功能</li>
+<li><a href="https://www.tslang.cn/docs/handbook/compiler-options.html" target="_blank" rel="noopener">编译选项</a></li>
+</ul>
+<p>files：指定将被编译的文件，包含相对或绝对文件路径的列表<br>include：指定将被编译的文件夹或文件，一个文件 glob 匹配模式列表<br>exclude：指定不被编译的文件夹或文件，一个文件 glob 匹配模式列表</p>
+<ul>
+<li>*：匹配 0 或多个字符</li>
+<li>？：匹配任意一个字符</li>
+<li>**/：递归匹配任意子目录</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化的tsconfig.js</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="comment">/* Basic Options */</span></span><br><span class="line">    <span class="comment">// "incremental": true,                   /* Enable incremental compilation */</span></span><br><span class="line">    <span class="string">"target"</span>: <span class="string">"es5"</span>,                          <span class="comment">/* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */</span></span><br><span class="line">    <span class="string">"module"</span>: <span class="string">"commonjs"</span>,                     <span class="comment">/* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */</span></span><br><span class="line">    <span class="comment">// "lib": [],                             /* Specify library files to be included in the compilation. */</span></span><br><span class="line">    <span class="comment">// "allowJs": true,                       /* Allow javascript files to be compiled. */</span></span><br><span class="line">    <span class="comment">// "checkJs": true,                       /* Report errors in .js files. */</span></span><br><span class="line">    <span class="comment">// "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */</span></span><br><span class="line">    <span class="comment">// "declaration": true,                   /* Generates corresponding '.d.ts' file. */</span></span><br><span class="line">    <span class="comment">// "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */</span></span><br><span class="line">    <span class="comment">// "sourceMap": true,                     /* Generates corresponding '.map' file. */</span></span><br><span class="line">    <span class="comment">// "outFile": "./",                       /* Concatenate and emit output to single file. */</span></span><br><span class="line">    <span class="comment">// "outDir": "./",                        /* Redirect output structure to the directory. */</span></span><br><span class="line">    <span class="comment">// "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */</span></span><br><span class="line">    <span class="comment">// "composite": true,                     /* Enable project compilation */</span></span><br><span class="line">    <span class="comment">// "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */</span></span><br><span class="line">    <span class="comment">// "removeComments": true,                /* Do not emit comments to output. */</span></span><br><span class="line">    <span class="comment">// "noEmit": true,                        /* Do not emit outputs. */</span></span><br><span class="line">    <span class="comment">// "importHelpers": true,                 /* Import emit helpers from 'tslib'. */</span></span><br><span class="line">    <span class="comment">// "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */</span></span><br><span class="line">    <span class="comment">// "isolatedModules": true,               /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Strict Type-Checking Options */</span></span><br><span class="line">    <span class="string">"strict"</span>: <span class="literal">true</span>,                           <span class="comment">/* Enable all strict type-checking options. */</span></span><br><span class="line">    <span class="comment">// "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */</span></span><br><span class="line">    <span class="comment">// "strictNullChecks": true,              /* Enable strict null checks. */</span></span><br><span class="line">    <span class="comment">// "strictFunctionTypes": true,           /* Enable strict checking of function types. */</span></span><br><span class="line">    <span class="comment">// "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */</span></span><br><span class="line">    <span class="comment">// "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */</span></span><br><span class="line">    <span class="comment">// "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */</span></span><br><span class="line">    <span class="comment">// "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Additional Checks */</span></span><br><span class="line">    <span class="comment">// "noUnusedLocals": true,                /* Report errors on unused locals. */</span></span><br><span class="line">    <span class="comment">// "noUnusedParameters": true,            /* Report errors on unused parameters. */</span></span><br><span class="line">    <span class="comment">// "noImplicitReturns": true,             /* Report error when not all code paths in function return a value. */</span></span><br><span class="line">    <span class="comment">// "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Module Resolution Options */</span></span><br><span class="line">    <span class="comment">// "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */</span></span><br><span class="line">    <span class="comment">// "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */</span></span><br><span class="line">    <span class="comment">// "paths": &#123;&#125;,                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */</span></span><br><span class="line">    <span class="comment">// "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */</span></span><br><span class="line">    <span class="comment">// "typeRoots": [],                       /* List of folders to include type definitions from. */</span></span><br><span class="line">    <span class="comment">// "types": [],                           /* Type declaration files to be included in compilation. */</span></span><br><span class="line">    <span class="comment">// "allowSyntheticDefaultImports": true,  /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */</span></span><br><span class="line">    <span class="string">"esModuleInterop"</span>: <span class="literal">true</span>,                  <span class="comment">/* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */</span></span><br><span class="line">    <span class="comment">// "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */</span></span><br><span class="line">    <span class="comment">// "allowUmdGlobalAccess": true,          /* Allow accessing UMD globals from modules. */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Source Map Options */</span></span><br><span class="line">    <span class="comment">// "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */</span></span><br><span class="line">    <span class="comment">// "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */</span></span><br><span class="line">    <span class="comment">// "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */</span></span><br><span class="line">    <span class="comment">// "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Experimental Options */</span></span><br><span class="line">    <span class="comment">// "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */</span></span><br><span class="line">    <span class="comment">// "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Advanced Options */</span></span><br><span class="line">    <span class="string">"forceConsistentCasingInFileNames"</span>: <span class="literal">true</span>  <span class="comment">/* Disallow inconsistently-cased references to the same file. */</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-增加的功能"><a href="#4-增加的功能" class="headerlink" title="4.增加的功能"></a>4.增加的功能</h2><ul>
+<li>类型批注：编译时对数据的类型进行检查</li>
+<li>类型推断：根据上下文推断数据的类型</li>
+<li>接口：使用 interface 指定一个对象的属性及属性类型</li>
+<li>装饰器：一种特殊类型的声明，它能够非侵入式的被附加到类声明，方法， 访问符，属性或参数上</li>
+<li>装饰器的类型：类装饰器，访问器装饰器，属性装饰器，方法装饰器，参数装饰器</li>
+<li>范型：使函数可以接收任意类型的参数，并返回相同的类型</li>
+</ul>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2020/06/01/vue/" class="pre-post btn btn-default" title='vue'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            vue</span>
+    </a>
+    
+    
+    <a href="/2020/04/01/npm/" class="next-post btn btn-default" title='npm'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            npm</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基础"><span class="toc-text">1.基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-基础类型"><span class="toc-text">2.基础类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-tsconfig-js-文件"><span class="toc-text">3.tsconfig.js 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-增加的功能"><span class="toc-text">4.增加的功能</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
