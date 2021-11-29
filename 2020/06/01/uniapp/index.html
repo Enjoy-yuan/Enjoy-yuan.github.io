@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="uniapp" />
+
+
+<meta name="description" content="uniapp 多端小程序开发
+
+
+1. 双大括号中不能包裹对象
+在 data 中定义空数组[]，在 template 中会被默认转为空字符串’’，可用==验证
+
+2.picker 组件无法使用 ..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    uniapp |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                一路寂灭，一路超越
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="https://yuanchengjs.cn" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                后台</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="uniapp">
+            
+            uniapp
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/uniapp/" rel="tag">uniapp</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2020/06/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>uniapp 多端小程序开发</p>
+<a id="more"></a>
+
+<h2 id="1-双大括号中不能包裹对象"><a href="#1-双大括号中不能包裹对象" class="headerlink" title="1. 双大括号中不能包裹对象"></a>1. 双大括号中不能包裹对象</h2><ul>
+<li>在 data 中定义空数组[]，在 template 中会被默认转为空字符串’’，可用==验证</li>
+</ul>
+<h2 id="2-picker-组件无法使用-v-model"><a href="#2-picker-组件无法使用-v-model" class="headerlink" title="2.picker 组件无法使用 v-model"></a>2.picker 组件无法使用 v-model</h2><ul>
+<li>使用 e.target.value 来获取值</li>
+</ul>
+<h2 id="3-数据在开发者工具可以获取，在真机上获取不到"><a href="#3-数据在开发者工具可以获取，在真机上获取不到" class="headerlink" title="3.数据在开发者工具可以获取，在真机上获取不到"></a>3.数据在开发者工具可以获取，在真机上获取不到</h2><ul>
+<li>接口 url 使用``模板字符串不能换行，微信开发者工具请求正常，真机调试会报 404</li>
+</ul>
+<h2 id="4-发布后，手机扫码显示页面不存在"><a href="#4-发布后，手机扫码显示页面不存在" class="headerlink" title="4.发布后，手机扫码显示页面不存在"></a>4.发布后，手机扫码显示页面不存在</h2><ul>
+<li>上传之后可以拥有一个体验版本，需要管理员分配权限</li>
+<li>修改页面路径：pages/index/index</li>
+<li>必须和 pages.json 中的路径匹配</li>
+</ul>
+<h2 id="5-v-for-传参报错-undefined"><a href="#5-v-for-传参报错-undefined" class="headerlink" title="5.v-for 传参报错 undefined"></a>5.v-for 传参报错 undefined</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;view v-<span class="keyword">for</span>=<span class="string">"(index) in 10"</span> :key=<span class="string">"index"</span> @click=<span class="string">"fun(index)"</span>&gt;</span><br><span class="line">  &#123;&#123;index&#125;&#125;</span><br><span class="line">&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 必须加上item</span></span><br><span class="line"><span class="regexp">&lt;view v-for="(item,index) in 10" :key="index" @click="fun(index)"&gt;</span></span><br><span class="line"><span class="regexp">  &#123;&#123;index&#125;&#125;-&#123;&#123;item&#125;&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>view&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-变量初始赋值为空字符串’’时，无法响应式赋值为-0"><a href="#6-变量初始赋值为空字符串’’时，无法响应式赋值为-0" class="headerlink" title="6.变量初始赋值为空字符串’’时，无法响应式赋值为 0"></a>6.变量初始赋值为空字符串’’时，无法响应式赋值为 0</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此时test控制台输出0，但是页面没有变化</span></span><br><span class="line">test: <span class="string">''</span></span><br><span class="line">&lt;view&gt;</span><br><span class="line">  &lt;view @click=<span class="string">"test=0"</span>&gt;点击我&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">  &#123;&#123;test&#125;&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>view&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 必须初始将其赋值为数字</span></span><br><span class="line">test: <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-使用百度小程序打开-uniapp-项目"><a href="#7-使用百度小程序打开-uniapp-项目" class="headerlink" title="7.使用百度小程序打开 uniapp 项目"></a>7.使用百度小程序打开 uniapp 项目</h2><ul>
+<li>必须点发行创建 unpackage 目录，并且在百度小程序开发者工具中选中 dev 下的 mp-baidu 文件夹</li>
+</ul>
+<h2 id="8-hbuild-设置启动页"><a href="#8-hbuild-设置启动页" class="headerlink" title="8.hbuild 设置启动页"></a>8.hbuild 设置启动页</h2><ul>
+<li>pages 数组中第一项表示应用启动页</li>
+<li>必须将启动页放到第一个</li>
+<li>也可通过添加编译模式直接打开其它路径的页面</li>
+</ul>
+<h2 id="9-登录微信后台"><a href="#9-登录微信后台" class="headerlink" title="9.登录微信后台"></a>9.登录微信后台</h2><ul>
+<li><a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>：用来管理网站，公众号，小程序等</li>
+<li><a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener">微信公众平台</a>：微信小程序的管理后台</li>
+</ul>
+<h2 id="10-实现微信静默登录"><a href="#10-实现微信静默登录" class="headerlink" title="10.实现微信静默登录"></a>10.实现微信静默登录</h2><ul>
+<li>先获取临时 code，并将其作为参数传递</li>
+<li>根据 appid+secret+js_code 获取到 openid，session_key，unionid</li>
+<li>必须在微信开放平台绑定小程序才能获取到 unionid</li>
+<li>通过将 unionid 传给后台获取用户的所有信息以及 token</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 微信登录</span></span><br><span class="line">oauth(value) &#123;</span><br><span class="line">  uni.login(&#123;</span><br><span class="line">    provider: <span class="string">'weixin'</span>,</span><br><span class="line">    success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.login(res.code);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">'授权登录失败'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取用户认证</span></span><br><span class="line">login(js_code) &#123;</span><br><span class="line">  uni.request(&#123;</span><br><span class="line">    url: <span class="string">'https://api.weixin.qq.com/sns/jscode2session?appid=XXX&amp;secret=XXX&amp;js_code='</span> + js_code + <span class="string">'&amp;grant_type=authorization_code'</span>,</span><br><span class="line">    success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取到的data</span></span><br><span class="line">openid: <span class="string">"XXX"</span></span><br><span class="line">session_key: <span class="string">"XXX"</span></span><br><span class="line">unionid: <span class="string">"XXX"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过微信可获取到部分用户信息，没啥用</span></span><br><span class="line">&lt;button open-type=<span class="string">"getUserInfo"</span> lang=<span class="string">"zh_CN"</span> bindgetuserinfo=<span class="string">"onGotUserInfo"</span>&gt;获取用户信息&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">uni.getUserInfo(&#123;</span></span><br><span class="line"><span class="regexp">  provider: 'weixin',</span></span><br><span class="line"><span class="regexp">  success: infoRes =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    console.log(infoRes);</span></span><br><span class="line"><span class="regexp">  &#125;,</span></span><br><span class="line"><span class="regexp">  fail: err =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    console.error('授权登录失败：' + JSON.stringify(err));</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;);</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-请求响应的状态码"><a href="#11-请求响应的状态码" class="headerlink" title="11.请求响应的状态码"></a>11.请求响应的状态码</h2><ul>
+<li>400，401 等状态码在 success 函数中获取，5XX 状态码在 fail 函数中获取</li>
+<li>接口规范：默认只返回 200，500 状态码</li>
+</ul>
+<h2 id="12-下拉刷新-onPullDownRefresh"><a href="#12-下拉刷新-onPullDownRefresh" class="headerlink" title="12.下拉刷新 onPullDownRefresh"></a>12.下拉刷新 onPullDownRefresh</h2><ul>
+<li>data 中的数据不会被重置</li>
+<li>轮播图的图片不会回到第一页</li>
+<li>在所有请求执行完毕后关闭动画</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">onPullDownRefresh() &#123;</span><br><span class="line">  <span class="built_in">Promise</span>.all([<span class="keyword">this</span>.getBanner(), <span class="keyword">this</span>.getCount(), <span class="keyword">this</span>.getPerson(), <span class="keyword">this</span>.getNews()]).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    uni.stopPullDownRefresh();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  <span class="comment">// 获取轮播图图片</span></span><br><span class="line">  getBanner() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      uni.request(&#123;</span><br><span class="line">        url: <span class="keyword">this</span>.$api + <span class="string">'api/adverts/GetAdvertByDisplayPage'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">          displayPage: <span class="string">'APP主页顶部'</span></span><br><span class="line">        &#125;,</span><br><span class="line">        success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">          resolve(res);</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">"getBanner"</span>)</span><br><span class="line">          <span class="keyword">this</span>.bannerImg = res.data.ResponseObject;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-建议使用-h5-调试"><a href="#13-建议使用-h5-调试" class="headerlink" title="13.建议使用 h5 调试"></a>13.建议使用 h5 调试</h2><ul>
+<li>修改代码刷新页面，效果呈现更快</li>
+</ul>
+<h2 id="14-路由回跳携带参数"><a href="#14-路由回跳携带参数" class="headerlink" title="14.路由回跳携带参数"></a>14.路由回跳携带参数</h2><ul>
+<li>此方法 h5 不可用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">back(cityName) &#123;</span><br><span class="line">  <span class="comment">// #ifdef MP-WEIXIN||MP-BAIDU</span></span><br><span class="line">  <span class="keyword">let</span> pages = getCurrentPages();</span><br><span class="line">  <span class="keyword">let</span> prevPage = pages[pages.length - <span class="number">2</span>];</span><br><span class="line">  prevPage.setData(&#123; cityName &#125;);</span><br><span class="line">  <span class="comment">// #endif</span></span><br><span class="line">  uni.navigateBack();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">onShow() &#123;</span><br><span class="line">  <span class="comment">// 获取城市名</span></span><br><span class="line">  <span class="comment">// #ifdef MP-WEIXIN||MP-BAIDU</span></span><br><span class="line">  <span class="keyword">let</span> pages = getCurrentPages();</span><br><span class="line">  <span class="keyword">let</span> currPage = pages[pages.length - <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">this</span>.cityName = currPage.data.cityName;</span><br><span class="line">  <span class="comment">// #endif</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.cityName)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-去除-navigator-跳转点击时的背景色"><a href="#15-去除-navigator-跳转点击时的背景色" class="headerlink" title="15.去除 navigator 跳转点击时的背景色"></a>15.去除 navigator 跳转点击时的背景色</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;navigator hover-<span class="class"><span class="keyword">class</span></span>=<span class="string">"none"</span> url=<span class="string">"../index/calculator"</span>&gt;&lt;<span class="regexp">/navigator&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="16-对-request-请求进行封装"><a href="#16-对-request-请求进行封装" class="headerlink" title="16.对 request 请求进行封装"></a>16.对 request 请求进行封装</h2><ul>
+<li>Storage 在 h5 下默认存 localStorage</li>
+<li>存在 token 就将其添加到 header 中</li>
+<li>token 过期则跳回登录页</li>
+<li>对 fail 函数做统一的错误弹框提示</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// utils/request</span></span><br><span class="line"><span class="keyword">const</span> request = <span class="function">(<span class="params">url, data, method = <span class="string">'GET'</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> baseURL = <span class="string">'https://xxx.cn/'</span></span><br><span class="line">  <span class="keyword">let</span> access_token = <span class="string">''</span></span><br><span class="line">  <span class="comment">// h5下默认存localStorage</span></span><br><span class="line">  uni.getStorage(&#123;</span><br><span class="line">    key: <span class="string">'storage_key'</span>,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 存在便赋值</span></span><br><span class="line">      access_token = res.data.access_token</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    uni.request(&#123;</span><br><span class="line">      url: baseURL + url,</span><br><span class="line">      data,</span><br><span class="line">      method,</span><br><span class="line">      header: &#123;</span><br><span class="line">        authorization: <span class="string">`bearer <span class="subst">$&#123;access_token&#125;</span>`</span></span><br><span class="line">      &#125;,</span><br><span class="line">      success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (res.statusCode === <span class="number">401</span>) &#123;</span><br><span class="line">          <span class="comment">// 登录过期则跳回登录页</span></span><br><span class="line">          uni.navigateTo(&#123;</span><br><span class="line">            url: <span class="string">'/pages/login/login'</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          resolve(res.data)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      fail(err) &#123;</span><br><span class="line">        reject(err)</span><br><span class="line">        <span class="comment">// 提示服务器错误</span></span><br><span class="line">        uni.showToast(&#123;</span><br><span class="line">          icon: <span class="string">'none'</span>,</span><br><span class="line">          title: <span class="string">'服务器错误!'</span></span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> request</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js 挂载到vue上</span></span><br><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">'./utils/request.js'</span></span><br><span class="line">Vue.prototype.$request = request</span><br><span class="line"></span><br><span class="line"><span class="comment">// .vue文件中使用，对比可知简洁很多</span></span><br><span class="line"><span class="keyword">this</span>.$request(<span class="string">'api/Articles/GetArticleByPage'</span>, &#123;</span><br><span class="line">  categoryName: <span class="string">'社保资讯'</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">this</span>.newsArr = res.ResponseObject.Items.slice(<span class="number">0</span>, <span class="number">4</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-web-view-跳转"><a href="#17-web-view-跳转" class="headerlink" title="17.web-view 跳转"></a>17.web-view 跳转</h2><ul>
+<li>必须是验证为企业，才可以配置业务域名</li>
+<li>业务域名为 web-view 跳转的 url 的域名</li>
+<li>校验文件必须先放到项目根目录下可以访问，才能配置业务域名成功</li>
+<li>若是跳转公众号网页，本地还需要配置该公众号开发者权限</li>
+</ul>
+<h2 id="18-app-json-全局配置文件"><a href="#18-app-json-全局配置文件" class="headerlink" title="18.app.json 全局配置文件"></a>18.app.json 全局配置文件</h2><ul>
+<li>pages：页面的路径</li>
+<li>window：窗口表现</li>
+<li>tabBar：底部导航</li>
+<li>networkTimeout：网络超时时间</li>
+<li>bindtap</li>
+<li>data-name</li>
+<li>open-type</li>
+<li>data-hi</li>
+</ul>
+<h2 id="19-在微信小程序中使用-less"><a href="#19-在微信小程序中使用-less" class="headerlink" title="19.在微信小程序中使用 less"></a>19.在微信小程序中使用 less</h2><ul>
+<li>vscode 下载插件：easy less</li>
+<li>首选项-&gt;设置-&gt;搜索 easy-&gt;添加”outExt”: “.wxss”</li>
+<li>在文件中新建.less 文件，此时会自动转成.wxss 文件</li>
+</ul>
+<h2 id="20-scale-不兼容"><a href="#20-scale-不兼容" class="headerlink" title="20.scale 不兼容"></a>20.scale 不兼容</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scale:&#123;&#123;roomScale&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 必须这样写</span></span><br><span class="line">transform:scale(&#123;&#123;roomScale&#125;&#125;,&#123;&#123;roomScale&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-在自定义组件中使用-vant"><a href="#21-在自定义组件中使用-vant" class="headerlink" title="21.在自定义组件中使用 vant"></a>21.在自定义组件中使用 vant</h2><ul>
+<li>样式修改必须设置到 app.less，在当前组件设置无效</li>
+<li>或者在自定义组件中加入如下代码</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">options: &#123;</span><br><span class="line">  styleIsolation: <span class="string">'shared'</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="22-特殊机型顶部和底部距离的兼容"><a href="#22-特殊机型顶部和底部距离的兼容" class="headerlink" title="22.特殊机型顶部和底部距离的兼容"></a>22.特殊机型顶部和底部距离的兼容</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// App.vue</span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  globalData: &#123;</span><br><span class="line">    headerHeight: <span class="number">0</span>,</span><br><span class="line">    statusBarHeight: <span class="number">0</span>,</span><br><span class="line">    isPhoneX: <span class="literal">false</span>,</span><br><span class="line">    baseUrl: process.env.VUE_APP_API_URL || <span class="string">'https://xxx.cc'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  onLaunch() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; model, system, statusBarHeight &#125; = wx.getSystemInfoSync();</span><br><span class="line">    <span class="keyword">let</span> headHeight;</span><br><span class="line">    <span class="keyword">if</span> (<span class="regexp">/iphone\s&#123;0,&#125;x/i</span>.test(model)) &#123;</span><br><span class="line">      <span class="keyword">this</span>.globalData.isPhoneX = <span class="literal">true</span>;</span><br><span class="line">      headHeight = <span class="number">88</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (system.indexOf(<span class="string">'Android'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">      headHeight = <span class="number">68</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      headHeight = <span class="number">64</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.globalData.headerHeight = headHeight;</span><br><span class="line">    <span class="keyword">this</span>.globalData.statusBarHeight = statusBarHeight;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ .vue文件中设置距离</span></span><br><span class="line"><span class="regexp">&lt;view class="title" :style="&#123; paddingTop: (headerHeight + statusBarHeight) /</span> <span class="number">2</span> - <span class="number">12</span> + <span class="string">'px'</span> &#125;<span class="string">"&gt;</span></span><br><span class="line"><span class="string">  &lt;view class="</span>arrow<span class="string">" @click="</span>toRoom<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    &lt;van-icon name="</span>arrow-left<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">  &lt;/view&gt;</span></span><br><span class="line"><span class="string">  云视频</span></span><br><span class="line"><span class="string">&lt;/view&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">onLoad() &#123;</span></span><br><span class="line"><span class="string">  // 设置顶部padding高度</span></span><br><span class="line"><span class="string">  const appData = getApp().globalData;</span></span><br><span class="line"><span class="string">  this.headerHeight = appData.headerHeight;</span></span><br><span class="line"><span class="string">  this.statusBarHeight = appData.statusBarHeight;</span></span><br><span class="line"><span class="string">  if (appData.isPhoneX) &#123;</span></span><br><span class="line"><span class="string">    this.isPhoneX = appData.isPhoneX;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="23-在小程序中使用-axios"><a href="#23-在小程序中使用-axios" class="headerlink" title="23.在小程序中使用 axios"></a>23.在小程序中使用 axios</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"><span class="keyword">import</span> adapter <span class="keyword">from</span> <span class="string">'axios-miniprogram-adapter'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> service = axios.create(&#123;</span><br><span class="line">  baseURL: process.env.VUE_APP_API_URL || <span class="string">'https://xxx.cc'</span>,</span><br><span class="line">  adapter,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    <span class="string">'content-type'</span>: <span class="string">'application/x-www-form-urlencoded'</span>, <span class="comment">// 默认值</span></span><br><span class="line">    Accepts: <span class="string">'application/json'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求拦截器</span></span><br><span class="line">service.interceptors.request.use(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> config</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 响应拦截器</span></span><br><span class="line">service.interceptors.response.use(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// resolve(res.data)</span></span><br><span class="line">    <span class="keyword">return</span> res.data</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(err)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> service</span><br></pre></td></tr></table></figure>
+
+<h2 id="24-获取页面路径所携带的参数"><a href="#24-获取页面路径所携带的参数" class="headerlink" title="24.获取页面路径所携带的参数"></a>24.获取页面路径所携带的参数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(options)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="25-多张图片上传成功后再执行操作"><a href="#25-多张图片上传成功后再执行操作" class="headerlink" title="25.多张图片上传成功后再执行操作"></a>25.多张图片上传成功后再执行操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将上传转promise</span></span><br><span class="line">promiseUpload(item) &#123;</span><br><span class="line">  <span class="keyword">const</span> that = <span class="keyword">this</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    wx.uploadFile(&#123;</span><br><span class="line">      url: getApp().globalData.baseUrl + <span class="string">'/api/base/file/uploadFile'</span>,</span><br><span class="line">      filePath: item,</span><br><span class="line">      name: <span class="string">'file'</span>,</span><br><span class="line">      formData: &#123;</span><br><span class="line">        typeFlag: <span class="string">'img'</span>,</span><br><span class="line">        ptfTopClinicId: that.bookingInfoData.ptfTopClinicId</span><br><span class="line">      &#125;,</span><br><span class="line">      success(res) &#123;</span><br><span class="line">        resolve(<span class="built_in">JSON</span>.parse(res.data).fileId);</span><br><span class="line">      &#125;,</span><br><span class="line">      fail(err) &#123;</span><br><span class="line">        m(err);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 上传图片</span></span><br><span class="line">uploadImg() &#123;</span><br><span class="line">  <span class="keyword">const</span> that = <span class="keyword">this</span>;</span><br><span class="line">  wx.chooseImage(&#123;</span><br><span class="line">    success(res) &#123;</span><br><span class="line">      <span class="built_in">Promise</span>.all(</span><br><span class="line">        res.tempFilePaths.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> that.promiseUpload(item);</span><br><span class="line">        &#125;)</span><br><span class="line">      ).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        that.$api</span><br><span class="line">          .updateVideoVisit(&#123;</span><br><span class="line">            clnVisitId: wx.getStorageSync(<span class="string">'visitId'</span>),</span><br><span class="line">            imgIdArr: <span class="built_in">JSON</span>.stringify(res)</span><br><span class="line">          &#125;)</span><br><span class="line">          .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">            Toast(&#123; <span class="attr">message</span>: <span class="string">'图片上传成功'</span>, <span class="attr">context</span>: that &#125;);</span><br><span class="line">            that.getBookingInfo();</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="26-引入-vant-weapp-内置样式"><a href="#26-引入-vant-weapp-内置样式" class="headerlink" title="26.引入 vant weapp 内置样式"></a>26.引入 vant weapp 内置样式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @import 'miniprogram_npm/@vant/weapp/common/index.wxss';</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="27-小程序分包"><a href="#27-小程序分包" class="headerlink" title="27.小程序分包"></a>27.小程序分包</h2><ul>
+<li>在 pages 的同级目录下创建 packageA 文件夹</li>
+<li>修改配置需要重新启动项目，可在 dist 目录下找到对应的分包文件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pages.json分包配置</span></span><br><span class="line"><span class="string">"subpackages"</span>: [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">"root"</span>: <span class="string">"packageA"</span>,</span><br><span class="line">    <span class="string">"pages"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="string">"path"</span>: <span class="string">"list/index"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">],</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面跳转</span></span><br><span class="line">&lt;navigator url=<span class="string">"/packageA/list/index"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"navigator"</span>&gt;去list页&lt;<span class="regexp">/navigator&gt;</span></span><br></pre></td></tr></table></figure>
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2020/07/01/nuxt/" class="pre-post btn btn-default" title='nuxt'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            nuxt</span>
+    </a>
+    
+    
+    <a href="/2020/05/01/npm/" class="next-post btn btn-default" title='npm'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            npm</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-双大括号中不能包裹对象"><span class="toc-text">1. 双大括号中不能包裹对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-picker-组件无法使用-v-model"><span class="toc-text">2.picker 组件无法使用 v-model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-数据在开发者工具可以获取，在真机上获取不到"><span class="toc-text">3.数据在开发者工具可以获取，在真机上获取不到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-发布后，手机扫码显示页面不存在"><span class="toc-text">4.发布后，手机扫码显示页面不存在</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-v-for-传参报错-undefined"><span class="toc-text">5.v-for 传参报错 undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-变量初始赋值为空字符串’’时，无法响应式赋值为-0"><span class="toc-text">6.变量初始赋值为空字符串’’时，无法响应式赋值为 0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-使用百度小程序打开-uniapp-项目"><span class="toc-text">7.使用百度小程序打开 uniapp 项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-hbuild-设置启动页"><span class="toc-text">8.hbuild 设置启动页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-登录微信后台"><span class="toc-text">9.登录微信后台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-实现微信静默登录"><span class="toc-text">10.实现微信静默登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-请求响应的状态码"><span class="toc-text">11.请求响应的状态码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-下拉刷新-onPullDownRefresh"><span class="toc-text">12.下拉刷新 onPullDownRefresh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-建议使用-h5-调试"><span class="toc-text">13.建议使用 h5 调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-路由回跳携带参数"><span class="toc-text">14.路由回跳携带参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-去除-navigator-跳转点击时的背景色"><span class="toc-text">15.去除 navigator 跳转点击时的背景色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-对-request-请求进行封装"><span class="toc-text">16.对 request 请求进行封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-web-view-跳转"><span class="toc-text">17.web-view 跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-app-json-全局配置文件"><span class="toc-text">18.app.json 全局配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-在微信小程序中使用-less"><span class="toc-text">19.在微信小程序中使用 less</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-scale-不兼容"><span class="toc-text">20.scale 不兼容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-在自定义组件中使用-vant"><span class="toc-text">21.在自定义组件中使用 vant</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-特殊机型顶部和底部距离的兼容"><span class="toc-text">22.特殊机型顶部和底部距离的兼容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-在小程序中使用-axios"><span class="toc-text">23.在小程序中使用 axios</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-获取页面路径所携带的参数"><span class="toc-text">24.获取页面路径所携带的参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-多张图片上传成功后再执行操作"><span class="toc-text">25.多张图片上传成功后再执行操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-引入-vant-weapp-内置样式"><span class="toc-text">26.引入 vant weapp 内置样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-小程序分包"><span class="toc-text">27.小程序分包</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

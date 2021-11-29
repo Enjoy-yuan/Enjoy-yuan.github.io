@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="nuxt" />
+
+
+<meta name="description" content="nuxt 服务端渲染
+
+
+1.一套代码，两套执行环境
+所有的 js 文件都是同时存在于客户端和服务器端
+只能在客户端使用 window，document，sessionStroage，使用时必须..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    nuxt |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                一路寂灭，一路超越
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="https://yuanchengjs.cn" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                后台</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="nuxt">
+            
+            nuxt
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/nuxt/" rel="tag">nuxt</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2020/07/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>nuxt 服务端渲染</p>
+<a id="more"></a>
+
+<h2 id="1-一套代码，两套执行环境"><a href="#1-一套代码，两套执行环境" class="headerlink" title="1.一套代码，两套执行环境"></a>1.一套代码，两套执行环境</h2><ul>
+<li>所有的 js 文件都是同时存在于客户端和服务器端</li>
+<li>只能在客户端使用 window，document，sessionStroage，使用时必须判断当前环境</li>
+<li>beforeCreate，Created 生命周期会同时在客户端和服务器端执行，vue 中的 data 数据也可以在服务器端被打印出来</li>
+</ul>
+<h2 id="2-基础知识"><a href="#2-基础知识" class="headerlink" title="2.基础知识"></a>2.基础知识</h2><ul>
+<li>nuxt 内置了 router 和 vuex，所以与此相关的代码会发生变化</li>
+<li>在 context 中是无法使用 this 指针的，绑定在 vue 原型上的变量和方法无法使用</li>
+<li>修改代码后记得使用 npm run dev 重启项目，热更新会有一些问题需要重启</li>
+</ul>
+<h2 id="3-引入阿里图标-iconfont-js"><a href="#3-引入阿里图标-iconfont-js" class="headerlink" title="3.引入阿里图标 iconfont.js"></a>3.引入阿里图标 iconfont.js</h2><ul>
+<li>在 nuxt.config.js 中全局引入，必须设置 ssr:false，否则将抛出 window is not defined</li>
+<li>修改此文件内容时需要 npm run dev 重新启动项目</li>
+<li>也可以在 layout 目录下的 default.vue 中进行引入</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nuxt.config.js</span></span><br><span class="line">plugins: [</span><br><span class="line">  <span class="string">"@/plugins/element-ui"</span>,</span><br><span class="line">  &#123; <span class="attr">src</span>: <span class="string">"@/assets/icon/iconfont.js"</span>, <span class="attr">ssr</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// default.vue，使用if判断当前是客户端环境时引入</span></span><br><span class="line"><span class="keyword">if</span> (process.client) &#123;</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">"../assets/icon/iconfont"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-发起-axios-请求"><a href="#4-发起-axios-请求" class="headerlink" title="4.发起 axios 请求"></a>4.发起 axios 请求</h2><ul>
+<li>必须使用 asyncData 才能同时在客户端和服务器端获取并渲染数据，刷新页面时不会重新发起请求，数据不会闪烁</li>
+<li>在 created 和 mounted 生命周期函数内发起的请求只能在客户端进行渲染</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> asyncData() &#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; data &#125; = <span class="keyword">await</span> axios.get(</span><br><span class="line">    <span class="string">"https://xxx.cn/api/City/GetCityList"</span></span><br><span class="line">  )</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">  <span class="keyword">return</span> &#123; <span class="attr">title</span>: data &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-layout-设置找不到路径页面"><a href="#5-layout-设置找不到路径页面" class="headerlink" title="5.layout 设置找不到路径页面"></a>5.layout 设置找不到路径页面</h2><ul>
+<li>layouts 文件夹下新建 null.vue 和 error.vue 文件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// null.vue</span></span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;nuxt /&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ error.vue</span></span><br><span class="line"><span class="regexp">&lt;div&gt;找不到路径页面&lt;/</span>div&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  layout: <span class="string">"null"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-vuex-使用"><a href="#6-vuex-使用" class="headerlink" title="6.vuex 使用"></a>6.vuex 使用</h2><ul>
+<li>不需要 index.js 文件来引入 vuex 和导出 store</li>
+<li>可以使用在子模块 state.js，mutations.js，getters.js，actions.js 中使用 export default 直接导出</li>
+<li>state 中返回的必须是一个对象</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  state.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> () =&gt; (&#123;</span><br><span class="line">  count: <span class="number">0</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// mutations.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  increment(state) &#123;</span><br><span class="line">    state.count++;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-登录状态的保存"><a href="#7-登录状态的保存" class="headerlink" title="7.登录状态的保存"></a>7.登录状态的保存</h2><ul>
+<li>可以安装 js-cookie 依赖，因为在服务端和客户端都可以操作 cookie</li>
+<li>直接在 js 文件中使用 sessionStorage，会报错 sessionStorage is not defined</li>
+<li>必须判断当前是客户端环境</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (process.client) &#123;</span><br><span class="line">  sessionStorage.setItem(<span class="string">""</span>, <span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-在-axios-封装的-js-文件中，当状态码为-401-时，使路由跳转到登录页"><a href="#8-在-axios-封装的-js-文件中，当状态码为-401-时，使路由跳转到登录页" class="headerlink" title="8.在 axios 封装的 js 文件中，当状态码为 401 时，使路由跳转到登录页"></a>8.在 axios 封装的 js 文件中，当状态码为 401 时，使路由跳转到登录页</h2><ul>
+<li>因为没有 router，所以无法使用 router.push()</li>
+<li>可以使用 window.location.href 来进行路由的跳转</li>
+<li>必须要判断当前是客户端环境，否则会报错 window is not defined</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (process.client) &#123;</span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"http://localhost:3000/about"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-npm-run-generate-之后使用本地-iis-打开-dist"><a href="#9-npm-run-generate-之后使用本地-iis-打开-dist" class="headerlink" title="9.npm run generate 之后使用本地 iis 打开 dist"></a>9.npm run generate 之后使用本地 iis 打开 dist</h2><ul>
+<li>单独点击 HTML 文件只能打开当前页面，当路由跳转时，页面会报错：找不到您的文件</li>
+<li>在 windows10 下搜索 iis，若搜索不到则需要手动安装</li>
+<li>控制面板-程序-启用或关闭 Windows 服务-勾选 Internet Information Services 下的 Web 管理工具和一些其他选项</li>
+<li>打开 iis，添加网站，填写网站名称，dist 文件夹物理路径，端口即可启动浏览</li>
+</ul>
+<h2 id="10-npm-run-generate-之后使用-live-server-打开-dist"><a href="#10-npm-run-generate-之后使用-live-server-打开-dist" class="headerlink" title="10.npm run generate 之后使用 live-server 打开 dist"></a>10.npm run generate 之后使用 live-server 打开 dist</h2><ul>
+<li>全局安装：npm i -g live-server</li>
+<li>dist 文件夹下：live-server</li>
+</ul>
+<h2 id="11-设置-title-前的小图标"><a href="#11-设置-title-前的小图标" class="headerlink" title="11.设置 title 前的小图标"></a>11.设置 title 前的小图标</h2><ul>
+<li>新建 static 文件夹，放入 favicon.ico 图标；必须为 static 文件夹，且图标必须为 ico</li>
+</ul>
+<h2 id="12-nuxt-项目-url-带中文参数报错"><a href="#12-nuxt-项目-url-带中文参数报错" class="headerlink" title="12.nuxt 项目 url 带中文参数报错"></a>12.nuxt 项目 url 带中文参数报错</h2><ul>
+<li>必须使用 encodeURIComponent 先进行转义</li>
+</ul>
+<h2 id="13-将查看网页源代码中的-css-提取到-css-文件"><a href="#13-将查看网页源代码中的-css-提取到-css-文件" class="headerlink" title="13.将查看网页源代码中的 css 提取到 css 文件"></a>13.将查看网页源代码中的 css 提取到 css 文件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nuxt.config.js 的build中添加</span></span><br><span class="line">extractCSS: &#123;</span><br><span class="line">  allChunks: <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="14-nuxt-项目报错"><a href="#14-nuxt-项目报错" class="headerlink" title="14.nuxt 项目报错"></a>14.nuxt 项目报错</h2><ul>
+<li>网站首页显示 500，其它页面正常，没有进入到 500 错误页</li>
+<li>本地启动报错：certificate has expired</li>
+<li>解决：存在 api 所在的服务器 SSL 证书过期，更换即可</li>
+</ul>
+<h2 id="15-配置环境变量"><a href="#15-配置环境变量" class="headerlink" title="15.配置环境变量"></a>15.配置环境变量</h2><ul>
+<li>安装依赖：cnpm i cross-env –save</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nuxt.config.js</span></span><br><span class="line">env: &#123;</span><br><span class="line">  BASE_URL1: process.env.BASE_URL1,</span><br><span class="line">  BASE_URL2: process.env.BASE_URL2,</span><br><span class="line">  NODE_ENV: process.env.NODE_ENV</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">  <span class="string">"dev"</span>: <span class="string">"cross-env BASE_URL1=https://xxx.cn/ BASE_URL2=xxx NODE_ENV=devlopment nuxt"</span>,</span><br><span class="line">  <span class="string">"qa"</span>: <span class="string">"cross-env BASE_URL1=https://xxx.cn/ BASE_URL2=xxx NODE_ENV=qa nuxt build"</span>,</span><br><span class="line">  <span class="string">"build"</span>: <span class="string">"cross-env BASE_URL1=https://xxx.cn/ BASE_URL2=xxx NODE_ENV=production nuxt build"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// default.vue</span></span><br><span class="line">created() &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'当前环境：'</span> + process.env.NODE_ENV)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'当前环境api1：'</span> + process.env.BASE_URL1)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'当前环境api2：'</span> + process.env.BASE_URL2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-隐藏-window-NUXT"><a href="#16-隐藏-window-NUXT" class="headerlink" title="16.隐藏 window.NUXT"></a>16.隐藏 window.<strong>NUXT</strong></h2><ul>
+<li>无法实现，改 npm 包会有副作用</li>
+<li><a href="https://github.com/nuxt/nuxt.js/issues/644" target="_blank" rel="noopener">issues 地址</a></li>
+</ul>
+<h2 id="17-实现服务端渲染进行分页"><a href="#17-实现服务端渲染进行分页" class="headerlink" title="17.实现服务端渲染进行分页"></a>17.实现服务端渲染进行分页</h2><ul>
+<li>将 pagesize 挂载到 url 上</li>
+</ul>
+<h2 id="18-不报错的错误"><a href="#18-不报错的错误" class="headerlink" title="18.不报错的错误"></a>18.不报错的错误</h2><ul>
+<li>本地启动正常，控制台无报错，自动部署也无报错，页面却打不开，提示：Server error</li>
+<li>可能是因为包含 http 请求，需要将 http 全部换成 https</li>
+</ul>
+<h2 id="19-自动部署时间长达几十分钟，-cnpm-i-太慢"><a href="#19-自动部署时间长达几十分钟，-cnpm-i-太慢" class="headerlink" title="19.自动部署时间长达几十分钟， cnpm i 太慢"></a>19.自动部署时间长达几十分钟， cnpm i 太慢</h2><ul>
+<li>下载 node-sass 包时，从 GitHub 上面拉取代码，速度会很慢</li>
+<li>本地快是因为有缓存，可以在 linus 服务器上设置缓存</li>
+</ul>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2020/08/01/algorithm/" class="pre-post btn btn-default" title='algorithm'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            algorithm</span>
+    </a>
+    
+    
+    <a href="/2020/06/01/uniapp/" class="next-post btn btn-default" title='uniapp'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            uniapp</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-一套代码，两套执行环境"><span class="toc-text">1.一套代码，两套执行环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-基础知识"><span class="toc-text">2.基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-引入阿里图标-iconfont-js"><span class="toc-text">3.引入阿里图标 iconfont.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-发起-axios-请求"><span class="toc-text">4.发起 axios 请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-layout-设置找不到路径页面"><span class="toc-text">5.layout 设置找不到路径页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-vuex-使用"><span class="toc-text">6.vuex 使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-登录状态的保存"><span class="toc-text">7.登录状态的保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-在-axios-封装的-js-文件中，当状态码为-401-时，使路由跳转到登录页"><span class="toc-text">8.在 axios 封装的 js 文件中，当状态码为 401 时，使路由跳转到登录页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-npm-run-generate-之后使用本地-iis-打开-dist"><span class="toc-text">9.npm run generate 之后使用本地 iis 打开 dist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-npm-run-generate-之后使用-live-server-打开-dist"><span class="toc-text">10.npm run generate 之后使用 live-server 打开 dist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-设置-title-前的小图标"><span class="toc-text">11.设置 title 前的小图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-nuxt-项目-url-带中文参数报错"><span class="toc-text">12.nuxt 项目 url 带中文参数报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-将查看网页源代码中的-css-提取到-css-文件"><span class="toc-text">13.将查看网页源代码中的 css 提取到 css 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-nuxt-项目报错"><span class="toc-text">14.nuxt 项目报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-配置环境变量"><span class="toc-text">15.配置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-隐藏-window-NUXT"><span class="toc-text">16.隐藏 window.NUXT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-实现服务端渲染进行分页"><span class="toc-text">17.实现服务端渲染进行分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-不报错的错误"><span class="toc-text">18.不报错的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-自动部署时间长达几十分钟，-cnpm-i-太慢"><span class="toc-text">19.自动部署时间长达几十分钟， cnpm i 太慢</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

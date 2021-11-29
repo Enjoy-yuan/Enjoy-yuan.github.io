@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="vue" />
+
+
+<meta name="description" content="vue 使用
+
+
+1.在子组件中获取父组件异步请求数据
+在 template 中可以正常显示，但是在生命周期中无法打印
+需要使用 watch 监听数据的变化
+对象内部属性的改变可以添加 deep..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    vue |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                一路寂灭，一路超越
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tags/outline/"><i class="fa fas fa-home"></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="https://yuanchengjs.cn" target="_blank" rel="noopener"><i class="fa fas fa-home"></i>
+                                后台</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="vue">
+            
+            vue
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/vue/" rel="tag">vue</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2020/11/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>vue 使用</p>
+<a id="more"></a>
+
+<h2 id="1-在子组件中获取父组件异步请求数据"><a href="#1-在子组件中获取父组件异步请求数据" class="headerlink" title="1.在子组件中获取父组件异步请求数据"></a>1.在子组件中获取父组件异步请求数据</h2><ul>
+<li>在 template 中可以正常显示，但是在生命周期中无法打印</li>
+<li>需要使用 watch 监听数据的变化</li>
+<li>对象内部属性的改变可以添加 deep 设置深度监听</li>
+<li>react 中可使用 getDerivedStateFromProps 生命周期函数获取</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  doctor: &#123;</span><br><span class="line">    handler: <span class="string">'formatData'</span>,</span><br><span class="line">    immediate: <span class="literal">true</span>,</span><br><span class="line">    deep: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-元素书写顺序"><a href="#2-元素书写顺序" class="headerlink" title="2.元素书写顺序"></a>2.元素书写顺序</h2><ul>
+<li>import</li>
+<li>name</li>
+<li>components</li>
+<li>props</li>
+<li>data</li>
+<li>computed</li>
+<li>watch</li>
+<li>lifecycle</li>
+<li>methods</li>
+</ul>
+<h2 id="3-父子组件生命周期打印顺序"><a href="#3-父子组件生命周期打印顺序" class="headerlink" title="3.父子组件生命周期打印顺序"></a>3.父子组件生命周期打印顺序</h2><ul>
+<li>只有 data 里的变量改变并且要在页面重新渲染完成之后才会调用 beforeUpdate 和 updated</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">father beforeCreate</span><br><span class="line">father created</span><br><span class="line">father beforeMount</span><br><span class="line">child beforeCreate</span><br><span class="line">child created</span><br><span class="line">child beforeMount</span><br><span class="line">child mounted</span><br><span class="line">father mounted</span><br><span class="line">child beforeUpdate</span><br><span class="line">child updated</span><br><span class="line">father beforeUpdate</span><br><span class="line">father updated</span><br><span class="line">father beforeDestory</span><br><span class="line">child beforeDestory</span><br><span class="line">child destoryed</span><br><span class="line">father destoryed</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-路由跳转后，滚动条回到顶部"><a href="#4-路由跳转后，滚动条回到顶部" class="headerlink" title="4.路由跳转后，滚动条回到顶部"></a>4.路由跳转后，滚动条回到顶部</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line">router.afterEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">window</span>.scrollTo(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-无法检测到数组变化"><a href="#5-无法检测到数组变化" class="headerlink" title="5.无法检测到数组变化"></a>5.无法检测到数组变化</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  <span class="keyword">return</span>&#123;</span><br><span class="line">    items: [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>],</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="keyword">this</span>.items[<span class="number">1</span>] = <span class="string">"x"</span>;</span><br><span class="line"><span class="keyword">this</span>.items.length = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//替换</span></span><br><span class="line"><span class="keyword">this</span>.items.splice(index, <span class="number">1</span>, value);</span><br><span class="line"><span class="keyword">this</span>.items.splice(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-对象属性无法响应式"><a href="#6-对象属性无法响应式" class="headerlink" title="6.对象属性无法响应式"></a>6.对象属性无法响应式</h2><ul>
+<li>响应式的对象属性必须已经存在</li>
+<li>表格数据新加的列属性要提前定义，否则数据改变视图不会更新</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.union = &#123;&#125;</span><br><span class="line"><span class="comment">//更改为</span></span><br><span class="line"><span class="keyword">this</span>.union = &#123;</span><br><span class="line">  name: <span class="string">''</span>,</span><br><span class="line">  text: <span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-在-vue-项目中的-css-下设置背景图片"><a href="#7-在-vue-项目中的-css-下设置背景图片" class="headerlink" title="7.在 vue 项目中的 css 下设置背景图片"></a>7.在 vue 项目中的 css 下设置背景图片</h2><ul>
+<li>无法使用@img</li>
+<li>当打包之后背景图片无法在 img 文件夹下找到时，是因为 vue 会默认将小图片转成 base64</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image: url('../../../assets/img/Information-box.png');</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-nextTick-的使用场景"><a href="#8-nextTick-的使用场景" class="headerlink" title="8.nextTick 的使用场景"></a>8.nextTick 的使用场景</h2><ul>
+<li>在 created/mounted 生命周期函数中获取 dom 元素</li>
+<li>在元素被修改后，需要立即获取当前 dom 元素</li>
+<li>nextTick 先尝试使用 Promise.then、MutationObserver 和 setImmediate，如果执行环境不支持，则会采用 setTimeout(fn, 0) 代替</li>
+</ul>
+<h2 id="9-vant-移动端适配"><a href="#9-vant-移动端适配" class="headerlink" title="9.vant 移动端适配"></a>9.vant 移动端适配</h2><ul>
+<li>内联样式不会自动转 rem</li>
+<li>rootValue 或 viewportWidth 的值不建议修改，否则 vant 组件的大小也会随之变化</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// rem</span></span><br><span class="line"><span class="comment">// 安装插件</span></span><br><span class="line">cnpm i postcss-pxtorem lib-flexible -D</span><br><span class="line"><span class="comment">// 配置postcss.config.js，若没有该文件可新增该文件</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: &#123;</span><br><span class="line">    autoprefixer: &#123;</span><br><span class="line">      browsers: [<span class="string">'Android &gt;= 4.0'</span>, <span class="string">'iOS &gt;= 8'</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'postcss-pxtorem'</span>: &#123;</span><br><span class="line">      rootValue: <span class="number">37.5</span>,</span><br><span class="line">      propList: [<span class="string">'*'</span>],</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 在main.ts文件中还需要引入</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"lib-flexible/flexible"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// viewport适配</span></span><br><span class="line"><span class="comment">// 安装插件</span></span><br><span class="line">cnpm i postcss-px-to-viewport -D</span><br><span class="line"><span class="comment">// 配置vue.config.js，若没有该文件可新增该文件</span></span><br><span class="line"><span class="keyword">const</span> autoprefixer = <span class="built_in">require</span>(<span class="string">"autoprefixer"</span>);</span><br><span class="line"><span class="keyword">const</span> pxtoviewport = <span class="built_in">require</span>(<span class="string">"postcss-px-to-viewport"</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  outputDir: <span class="string">"dist"</span>,</span><br><span class="line">  publicPath: process.env.NODE_ENV === <span class="string">"production"</span> ? <span class="string">"/vant-demo/"</span> : <span class="string">"/"</span>,</span><br><span class="line">  css: &#123;</span><br><span class="line">    loaderOptions: &#123;</span><br><span class="line">      postcss: &#123;</span><br><span class="line">        plugins: [</span><br><span class="line">          autoprefixer(),</span><br><span class="line">          pxtoviewport(&#123;</span><br><span class="line">            viewportWidth: <span class="number">375</span></span><br><span class="line">          &#125;)</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-keep-alive-的使用"><a href="#10-keep-alive-的使用" class="headerlink" title="10.keep-alive 的使用"></a>10.keep-alive 的使用</h2><ul>
+<li>定义 两个 vue 文件，使用 keep-alive 包裹它们</li>
+<li>在两个路由之间不停切换，查看生命周期的运行情况</li>
+<li>可知路由第一次进入时会被缓存，再次进入生命周期函数不会被执行</li>
+<li>合理利用 keep-alive 可以减少页面请求</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一次输出，初始进入</span></span><br><span class="line">beforeCreate</span><br><span class="line">created</span><br><span class="line">beforeMount</span><br><span class="line">mounted</span><br><span class="line">activated</span><br><span class="line">beforeUpdate</span><br><span class="line">updated</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二次输出</span></span><br><span class="line">beforeCreate2</span><br><span class="line">created2</span><br><span class="line">beforeMount2</span><br><span class="line">deactivated</span><br><span class="line">mounted2</span><br><span class="line">activated2</span><br><span class="line">beforeUpdate</span><br><span class="line">beforeUpdate2</span><br><span class="line">updated2</span><br><span class="line">updated</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三次输出</span></span><br><span class="line">deactivated2</span><br><span class="line">activated</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第四次输出</span></span><br><span class="line">deactivated</span><br><span class="line">activated2</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-refs-与使用原生方法获取-dom-元素的区别"><a href="#11-refs-与使用原生方法获取-dom-元素的区别" class="headerlink" title="11.refs 与使用原生方法获取 dom 元素的区别"></a>11.refs 与使用原生方法获取 dom 元素的区别</h2><ul>
+<li>相对于原生 js 直接获取 dom 元素，ref 获取的是虚拟的 dom，可以有效减少性能消耗</li>
+<li>通过 ref 可以直接调用子组件内部的方法或数据</li>
+<li>在 mounted 生命周期内获取元素时，需要使用 this.$nextTick 来确保 dom 已经更新完毕</li>
+</ul>
+<h2 id="12-父子组件参数和方法的传递"><a href="#12-父子组件参数和方法的传递" class="headerlink" title="12.父子组件参数和方法的传递"></a>12.父子组件参数和方法的传递</h2><ul>
+<li>子组件接收父组件参数和方法：props</li>
+<li>父组件接收子组件参数和方法：this.$emit(参考 react，可以使用 props 的回调函数)</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Child.vue</span></span><br><span class="line">props: [<span class="string">'fn'</span>],</span><br><span class="line">data() &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">&#125;,</span><br><span class="line">mounted() &#123;</span><br><span class="line">  <span class="keyword">this</span>.fn(<span class="keyword">this</span>)</span><br><span class="line">  <span class="keyword">this</span>.$emit(<span class="string">'emitFn'</span>, <span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// index.vue如同react，可以使用回调函数</span></span><br><span class="line">&lt;Child :fn=<span class="string">"(msg) =&gt; (this.childRef = msg)"</span> @emitFn=<span class="string">"emitFn"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-执行过程"><a href="#13-执行过程" class="headerlink" title="13.执行过程"></a>13.执行过程</h2><ul>
+<li>使用 new Vue 初始化，合并配置，初始化生命周期，初始化事件中心，初始化渲染，初始化 data，props，computed，watcher 等</li>
+<li>Vue 是用 function 实现的类，new Vue 的时候生成实例化对象，拥有 Vue 原型上的属性和方法，并将 this 指针指向该实例化对象</li>
+<li>通过$mount 将实例去挂载到 dom 元素上，再通过 render 函数生成虚拟 dom 树 VNode</li>
+<li>渲染过程中的数据会通过 getter 被 Watcher 收集，若数据发生变化，会通知 Watcher 执行回调函数，再通过 updata 来把 VNode 渲染成真实的 dom</li>
+<li>若存在 template，会将 template 编译成 render 方法，若存在 jsx，同样会被编译成 render 方法</li>
+<li>在 render 方法内部通过返回 createElement 来创建元素生成虚拟 dom 树，通过 VNode 这个 class 去定义</li>
+</ul>
+<h2 id="14-响应式原理"><a href="#14-响应式原理" class="headerlink" title="14.响应式原理"></a>14.响应式原理</h2><ul>
+<li>通过 Object.defineProperty 给实例对象的所有属性添加 setter 和 getter 方法，getter 来进行依赖收集，setter 进行通知更新</li>
+<li>在组件的渲染过程中，通过 watcher 进行依赖的收集，当依赖项的 setter 触发时，会通知 watcher，然后将 watcher 添加到队列中，在 nextTick 之后将关联的组件进行更新</li>
+<li>弊端：对象不存在的属性无法被监听，数组在利用索引来修改值，或者修改长度的时候也不会被监听，当对象嵌套的层级比较深时，递归遍历性能不好</li>
+</ul>
+<h2 id="15-vuex"><a href="#15-vuex" class="headerlink" title="15.vuex"></a>15.vuex</h2><ul>
+<li>相比全局变量来说，vuex 中的 state 是响应式的，且可以保存异步数据，单向数据流</li>
+<li>mutations 中同样可以执行异步操作，使用 actions 便于使用 devtools 调试时，更好的追踪数据的状态变化</li>
+</ul>
+<h2 id="16-vue3-0-变化"><a href="#16-vue3-0-变化" class="headerlink" title="16.vue3.0 变化"></a>16.vue3.0 变化</h2><ul>
+<li>响应式变化改用 Proxy</li>
+<li>使用高阶组件而不是构造函数来初始化 app</li>
+<li>选项式 api 改为组合式 api</li>
+<li>使用 hooks 可以更好的状态复用</li>
+</ul>
+<h2 id="17-vue-与-react-的异同"><a href="#17-vue-与-react-的异同" class="headerlink" title="17.vue 与 react 的异同"></a>17.vue 与 react 的异同</h2><ul>
+<li>相同点：组件化，事件驱动，虚拟 DOM，全局状态管理</li>
+<li>不同点：react 需要手动调用 setState 来更新页面，vue 的 api 和约束 更多</li>
+<li>实际开发中 vue 项目过大时，修改代码后热加载很慢，且容易产生内存泄漏导致在热加载时启动失败</li>
+</ul>
+<h2 id="18-自定义组件"><a href="#18-自定义组件" class="headerlink" title="18.自定义组件"></a>18.自定义组件</h2><ul>
+<li>通过 props 暴露参数配置</li>
+<li>通过$emit 暴露事件</li>
+<li>通过动态 class 设置样式</li>
+</ul>
+<h2 id="19-微前端"><a href="#19-微前端" class="headerlink" title="19.微前端"></a>19.微前端</h2><ul>
+<li>qiankun</li>
+</ul>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2020/12/01/react/" class="pre-post btn btn-default" title='react'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            react</span>
+    </a>
+    
+    
+    <a href="/2020/10/01/javascript/" class="next-post btn btn-default" title='javascript'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            javascript</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在子组件中获取父组件异步请求数据"><span class="toc-text">1.在子组件中获取父组件异步请求数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-元素书写顺序"><span class="toc-text">2.元素书写顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-父子组件生命周期打印顺序"><span class="toc-text">3.父子组件生命周期打印顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-路由跳转后，滚动条回到顶部"><span class="toc-text">4.路由跳转后，滚动条回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-无法检测到数组变化"><span class="toc-text">5.无法检测到数组变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象属性无法响应式"><span class="toc-text">6.对象属性无法响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在-vue-项目中的-css-下设置背景图片"><span class="toc-text">7.在 vue 项目中的 css 下设置背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-nextTick-的使用场景"><span class="toc-text">8.nextTick 的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-vant-移动端适配"><span class="toc-text">9.vant 移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-keep-alive-的使用"><span class="toc-text">10.keep-alive 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-refs-与使用原生方法获取-dom-元素的区别"><span class="toc-text">11.refs 与使用原生方法获取 dom 元素的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-父子组件参数和方法的传递"><span class="toc-text">12.父子组件参数和方法的传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-执行过程"><span class="toc-text">13.执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-响应式原理"><span class="toc-text">14.响应式原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-vuex"><span class="toc-text">15.vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-vue3-0-变化"><span class="toc-text">16.vue3.0 变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-vue-与-react-的异同"><span class="toc-text">17.vue 与 react 的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-自定义组件"><span class="toc-text">18.自定义组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-微前端"><span class="toc-text">19.微前端</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
