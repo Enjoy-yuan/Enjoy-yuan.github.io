@@ -249,7 +249,7 @@
 <li>注意：修改邮箱地址后，之前暂存的修改要撤销后重新暂存，之前暂存的修改记录了之前的邮箱地址</li>
 <li>删除远端分支后，可使用 vscode 删除本地分支</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新分支推送到远端，也可直接点击vscode左下角图标</span></span><br><span class="line">git push --<span class="keyword">set</span>-upstream origin dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 删除远端分支</span><br><span class="line">git push origin --delete dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 更新本地分支</span><br><span class="line">git remote update origin</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新分支推送到远端，也可直接点击 vscode 左下角图标</span></span><br><span class="line">git push --<span class="keyword">set</span>-upstream origin dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 删除远端分支</span><br><span class="line">git push origin --delete dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 更新本地分支</span><br><span class="line">git remote update origin</span><br></pre></td></tr></table></figure>
 
 <h2 id="9-git-提交规范"><a href="#9-git-提交规范" class="headerlink" title="9.git 提交规范"></a>9.git 提交规范</h2><ul>
 <li>feat：添加新功能</li>
@@ -264,6 +264,7 @@
 <h2 id="10-打-tag-标记"><a href="#10-打-tag-标记" class="headerlink" title="10.打 tag 标记"></a>10.打 tag 标记</h2><ul>
 <li>查看本地 tag：git tag</li>
 <li>推送本地 tag：git push origin –tags</li>
+<li>删除远程 tag：git push origin –delete xxx</li>
 </ul>
 
     </div>
