@@ -225,9 +225,18 @@ Code Runer：运行 ..." />
 
 <h2 id="4-settings-json-配置"><a href="#4-settings-json-配置" class="headerlink" title="4.settings.json 配置"></a>4.settings.json 配置</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 设置颜色主题</span></span><br><span class="line">  <span class="string">"workbench.colorTheme"</span>: <span class="string">"Snazzy Operator"</span>,</span><br><span class="line">  <span class="comment">// 设置图标主题</span></span><br><span class="line">  <span class="string">"workbench.iconTheme"</span>: <span class="string">"material-icon-theme"</span>,</span><br><span class="line">  <span class="comment">// 设置字体大小</span></span><br><span class="line">  <span class="string">"editor.fontSize"</span>: <span class="number">14</span>,</span><br><span class="line">  <span class="comment">// 设置prettier扩展格式化4个空格</span></span><br><span class="line">  <span class="string">"prettier.tabWidth"</span>: <span class="number">4</span>,</span><br><span class="line">  <span class="comment">// 设置prettier扩展格式化单引号</span></span><br><span class="line">  <span class="string">"prettier.singleQuote"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 设置prettier扩展末尾不带分号</span></span><br><span class="line">  <span class="string">"prettier.semi"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 设置prettier扩展末尾不带逗号</span></span><br><span class="line">  <span class="string">"prettier.trailingComma"</span>: <span class="string">"none"</span>,</span><br><span class="line">  <span class="comment">// 设置prettier扩展代码宽度130</span></span><br><span class="line">  <span class="string">"prettier.printWidth"</span>: <span class="number">130</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-其它"><a href="#5-其它" class="headerlink" title="5.其它"></a>5.其它</h2><ul>
+<h2 id="5-解决访问-github-过慢"><a href="#5-解决访问-github-过慢" class="headerlink" title="5.解决访问 github 过慢"></a>5.解决访问 github 过慢</h2><ul>
+<li>首先通过终端命令获取 ip 地址：ping github.com</li>
+<li>然后输入命令打开 host 文件：sudo vim /etc/hosts，之后输入密码</li>
+<li>按 i 键进入编辑状态，添加 host 解析：140.82.114.4 github.com</li>
+<li>按 esc 键回到命令模式，输入:wq 保存修改并退出</li>
+<li>若出现报错只有只读权限，可先执行:q!强制退出</li>
+<li>之后使用 su root 切换到 root 账户或直接重新连接服务器</li>
+<li>在命令模式下，按 u 键可撤销修改</li>
+</ul>
+<h2 id="6-其它"><a href="#6-其它" class="headerlink" title="6.其它"></a>6.其它</h2><ul>
 <li>保留当前标签页：双击当前文件</li>
-<li>代码无法格式化：点击右下角 prettier</li>
+<li>代码无法格式化：点击右下角 prettier 找到报错</li>
 <li>mac 上查看隐藏的文件：command+shift+.</li>
 <li>mac 上谷歌浏览器打开控制台：command+option+i</li>
 <li>打开 smb：打开 Finder，command+k</li>
@@ -281,7 +290,7 @@ Code Runer：运行 ..." />
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-必备插件"><span class="toc-text">1.必备插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-常用快捷键"><span class="toc-text">2.常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-设置-vue-模板"><span class="toc-text">3.设置 vue 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-settings-json-配置"><span class="toc-text">4.settings.json 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-其它"><span class="toc-text">5.其它</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-必备插件"><span class="toc-text">1.必备插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-常用快捷键"><span class="toc-text">2.常用快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-设置-vue-模板"><span class="toc-text">3.设置 vue 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-settings-json-配置"><span class="toc-text">4.settings.json 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-解决访问-github-过慢"><span class="toc-text">5.解决访问 github 过慢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-其它"><span class="toc-text">6.其它</span></a></li></ol>
         
     </div>
 </aside>

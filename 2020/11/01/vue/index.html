@@ -210,6 +210,7 @@
 <h2 id="7-在-vue-项目中的-css-下设置背景图片"><a href="#7-在-vue-项目中的-css-下设置背景图片" class="headerlink" title="7.在 vue 项目中的 css 下设置背景图片"></a>7.在 vue 项目中的 css 下设置背景图片</h2><ul>
 <li>无法使用@img</li>
 <li>当打包之后背景图片无法在 img 文件夹下找到时，是因为 vue 会默认将小图片转成 base64</li>
+<li>固定的静态图片均可使用 background 来设置，仅从后端获取图片链接需要使用 img 标签</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image: url('../../../assets/img/Information-box.png');</span><br></pre></td></tr></table></figure>
 
@@ -277,9 +278,11 @@
 <li>通过动态 class 设置样式</li>
 </ul>
 <h2 id="19-微前端"><a href="#19-微前端" class="headerlink" title="19.微前端"></a>19.微前端</h2><ul>
-<li>qiankun</li>
+<li>使用框架：qiankun</li>
+<li>router-view 外不得使用 transition 包裹，会导致 dom 未加载的报错</li>
+<li>微前端的子应用二级域名需要在 nginx 中设置域名允许被跨域</li>
 </ul>
-
+<h2 id="20"><a href="#20" class="headerlink" title="20."></a>20.</h2>
     </div>
     
     <!-- <div class="post-footer">
@@ -326,7 +329,7 @@
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在子组件中获取父组件异步请求数据"><span class="toc-text">1.在子组件中获取父组件异步请求数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-元素书写顺序"><span class="toc-text">2.元素书写顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-父子组件生命周期打印顺序"><span class="toc-text">3.父子组件生命周期打印顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-路由跳转后，滚动条回到顶部"><span class="toc-text">4.路由跳转后，滚动条回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-无法检测到数组变化"><span class="toc-text">5.无法检测到数组变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象属性无法响应式"><span class="toc-text">6.对象属性无法响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在-vue-项目中的-css-下设置背景图片"><span class="toc-text">7.在 vue 项目中的 css 下设置背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-nextTick-的使用场景"><span class="toc-text">8.nextTick 的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-vant-移动端适配"><span class="toc-text">9.vant 移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-keep-alive-的使用"><span class="toc-text">10.keep-alive 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-refs-与使用原生方法获取-dom-元素的区别"><span class="toc-text">11.refs 与使用原生方法获取 dom 元素的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-父子组件参数和方法的传递"><span class="toc-text">12.父子组件参数和方法的传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-执行过程"><span class="toc-text">13.执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-响应式原理"><span class="toc-text">14.响应式原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-vuex"><span class="toc-text">15.vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-vue3-0-变化"><span class="toc-text">16.vue3.0 变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-vue-与-react-的异同"><span class="toc-text">17.vue 与 react 的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-自定义组件"><span class="toc-text">18.自定义组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-微前端"><span class="toc-text">19.微前端</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在子组件中获取父组件异步请求数据"><span class="toc-text">1.在子组件中获取父组件异步请求数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-元素书写顺序"><span class="toc-text">2.元素书写顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-父子组件生命周期打印顺序"><span class="toc-text">3.父子组件生命周期打印顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-路由跳转后，滚动条回到顶部"><span class="toc-text">4.路由跳转后，滚动条回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-无法检测到数组变化"><span class="toc-text">5.无法检测到数组变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象属性无法响应式"><span class="toc-text">6.对象属性无法响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在-vue-项目中的-css-下设置背景图片"><span class="toc-text">7.在 vue 项目中的 css 下设置背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-nextTick-的使用场景"><span class="toc-text">8.nextTick 的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-vant-移动端适配"><span class="toc-text">9.vant 移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-keep-alive-的使用"><span class="toc-text">10.keep-alive 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-refs-与使用原生方法获取-dom-元素的区别"><span class="toc-text">11.refs 与使用原生方法获取 dom 元素的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-父子组件参数和方法的传递"><span class="toc-text">12.父子组件参数和方法的传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-执行过程"><span class="toc-text">13.执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-响应式原理"><span class="toc-text">14.响应式原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-vuex"><span class="toc-text">15.vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-vue3-0-变化"><span class="toc-text">16.vue3.0 变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-vue-与-react-的异同"><span class="toc-text">17.vue 与 react 的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-自定义组件"><span class="toc-text">18.自定义组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-微前端"><span class="toc-text">19.微前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20"><span class="toc-text">20.</span></a></li></ol>
         
     </div>
 </aside>
