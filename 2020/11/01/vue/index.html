@@ -169,7 +169,7 @@
         
         <p class="fa fa-exclamation-triangle warning">
             本文于<strong>
-                1568</strong>
+                1569</strong>
             天之前发表，文中内容可能已经过时。
         </p>
         
@@ -288,7 +288,20 @@
 <li>router-view 外不得使用 transition 包裹，会导致 dom 未加载的报错</li>
 <li>微前端的子应用二级域名需要在 nginx 中设置域名允许被跨域</li>
 </ul>
-<h2 id="20"><a href="#20" class="headerlink" title="20."></a>20.</h2>
+<h2 id="20-获取二进制流错误的返回数据"><a href="#20-获取二进制流错误的返回数据" class="headerlink" title="20.获取二进制流错误的返回数据"></a>20.获取二进制流错误的返回数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">reader.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; result &#125; = reader;</span><br><span class="line">  <span class="keyword">const</span> errorInfos = <span class="built_in">JSON</span>.parse(result <span class="keyword">as</span> string);</span><br><span class="line">  <span class="built_in">console</span>.log(errorInfos);</span><br><span class="line">&#125;;</span><br><span class="line">reader.onerror = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  resolve(&#123;</span><br><span class="line">    success: <span class="literal">false</span>,</span><br><span class="line">    message: <span class="string">'下载失败'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">reader.readAsText(xhr.response);</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-使用-vue3"><a href="#21-使用-vue3" class="headerlink" title="21.使用 vue3"></a>21.使用 vue3</h2><ul>
+<li>使用 Pinia 替换 Vuex</li>
+<li>使用 watchEffect 替换 watch</li>
+<li>使用 TS 替换 Js</li>
+<li>组合式 API 替换选项式 API</li>
+</ul>
+<h2 id="22-在子组件修改父组件传递的-props-的值"><a href="#22-在子组件修改父组件传递的-props-的值" class="headerlink" title="22.在子组件修改父组件传递的 props 的值"></a>22.在子组件修改父组件传递的 props 的值</h2><ul>
+<li>若为对象会自动同步数据</li>
+<li>数组或基本数据类型需要手动同步</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$emit(<span class="string">'update:areaCode'</span>, [<span class="string">'111'</span>])</span><br><span class="line">&lt;city-comp :cityPathArr.sync=<span class="string">"dialogForm areaCode"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
     </div>
     
     <!-- <div class="post-footer">
@@ -305,6 +318,12 @@
     </div> -->
 </article>
 <div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2024/07/26/wproxy/" class="pre-post btn btn-default" title='wproxy'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            wproxy</span>
+    </a>
     
     
     <a href="/2020/10/01/javascript/" class="next-post btn btn-default" title='javascript'>
@@ -329,7 +348,7 @@
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在子组件中获取父组件异步请求数据"><span class="toc-text">1.在子组件中获取父组件异步请求数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-元素书写顺序"><span class="toc-text">2.元素书写顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-父子组件生命周期打印顺序"><span class="toc-text">3.父子组件生命周期打印顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-路由跳转后，滚动条回到顶部"><span class="toc-text">4.路由跳转后，滚动条回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-无法检测到数组变化"><span class="toc-text">5.无法检测到数组变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象属性无法响应式"><span class="toc-text">6.对象属性无法响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在-vue-项目中的-css-下设置背景图片"><span class="toc-text">7.在 vue 项目中的 css 下设置背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-nextTick-的使用场景"><span class="toc-text">8.nextTick 的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-vant-移动端适配"><span class="toc-text">9.vant 移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-keep-alive-的使用"><span class="toc-text">10.keep-alive 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-refs-与使用原生方法获取-dom-元素的区别"><span class="toc-text">11.refs 与使用原生方法获取 dom 元素的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-父子组件参数和方法的传递"><span class="toc-text">12.父子组件参数和方法的传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-执行过程"><span class="toc-text">13.执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-响应式原理"><span class="toc-text">14.响应式原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-vuex"><span class="toc-text">15.vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-vue3-0-变化"><span class="toc-text">16.vue3.0 变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-vue-与-react-的异同"><span class="toc-text">17.vue 与 react 的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-自定义组件"><span class="toc-text">18.自定义组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-微前端"><span class="toc-text">19.微前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20"><span class="toc-text">20.</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在子组件中获取父组件异步请求数据"><span class="toc-text">1.在子组件中获取父组件异步请求数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-元素书写顺序"><span class="toc-text">2.元素书写顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-父子组件生命周期打印顺序"><span class="toc-text">3.父子组件生命周期打印顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-路由跳转后，滚动条回到顶部"><span class="toc-text">4.路由跳转后，滚动条回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-无法检测到数组变化"><span class="toc-text">5.无法检测到数组变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-对象属性无法响应式"><span class="toc-text">6.对象属性无法响应式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在-vue-项目中的-css-下设置背景图片"><span class="toc-text">7.在 vue 项目中的 css 下设置背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-nextTick-的使用场景"><span class="toc-text">8.nextTick 的使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-vant-移动端适配"><span class="toc-text">9.vant 移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-keep-alive-的使用"><span class="toc-text">10.keep-alive 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-refs-与使用原生方法获取-dom-元素的区别"><span class="toc-text">11.refs 与使用原生方法获取 dom 元素的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-父子组件参数和方法的传递"><span class="toc-text">12.父子组件参数和方法的传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-执行过程"><span class="toc-text">13.执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-响应式原理"><span class="toc-text">14.响应式原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-vuex"><span class="toc-text">15.vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-vue3-0-变化"><span class="toc-text">16.vue3.0 变化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-vue-与-react-的异同"><span class="toc-text">17.vue 与 react 的异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-自定义组件"><span class="toc-text">18.自定义组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-微前端"><span class="toc-text">19.微前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-获取二进制流错误的返回数据"><span class="toc-text">20.获取二进制流错误的返回数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-使用-vue3"><span class="toc-text">21.使用 vue3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-在子组件修改父组件传递的-props-的值"><span class="toc-text">22.在子组件修改父组件传递的 props 的值</span></a></li></ol>
         
     </div>
 </aside>

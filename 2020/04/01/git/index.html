@@ -170,7 +170,7 @@
         
         <p class="fa fa-exclamation-triangle warning">
             本文于<strong>
-                1782</strong>
+                1783</strong>
             天之前发表，文中内容可能已经过时。
         </p>
         
@@ -195,6 +195,7 @@
 <li>查看版本：git –version</li>
 <li>恢复提交：git stash</li>
 <li>撤销提交：git reset –soft head^</li>
+<li>指定合并策略：git config –global pull.rebase false</li>
 </ul>
 <h2 id="2-分支操作"><a href="#2-分支操作" class="headerlink" title="2.分支操作"></a>2.分支操作</h2><ul>
 <li>创建分支：git branch 分支名</li>
@@ -235,23 +236,23 @@
 <li><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">Sourcetree 客户端</a></li>
 <li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git 下载</a></li>
 <li><a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="noopener">git 命令</a></li>
-<li><a href="http://www.pc6.com/mac/111958.html" target="_blank" rel="noopener">cornerstone 客户端破解</a></li>
 <li><a href="https://svnbucket.com/#/" target="_blank" rel="noopener">SVNBucket 地址</a></li>
-<li><a href="https://easydoc.top/s/78711005/uSJD1CDg/60815798" target="_blank" rel="noopener">svn 教程</a></li>
 </ul>
 <h2 id="8-实际项目开发"><a href="#8-实际项目开发" class="headerlink" title="8.实际项目开发"></a>8.实际项目开发</h2><ul>
 <li>方式一：fork 原项目，将修改后的代码推送到 fork 的仓库，然后再推送合并到原项目地址</li>
 <li>方式二：新建一个分支，将修改后的代码推送到新分支，然后再推送合并到主分支</li>
 <li>注意：修改邮箱地址后，之前暂存的修改要撤销后重新暂存，之前暂存的修改记录了之前的邮箱地址</li>
-<li>删除远端分支后，可使用 vscode 删除本地分支</li>
+<li>在 gitlab 上删除远端分支后，可使用 vscode 删除本地分支</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新分支推送到远端，也可直接点击 vscode 左下角图标</span></span><br><span class="line">git push --<span class="keyword">set</span>-upstream origin dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 删除远端分支</span><br><span class="line">git push origin --delete dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 更新本地分支</span><br><span class="line">git remote update origin</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 新分支推送到远端，也可直接点击 vscode 图标</span></span><br><span class="line">git push --<span class="keyword">set</span>-upstream origin dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 删除远端分支，或通过gitlab操作</span><br><span class="line">git push origin --delete dev_yuancheng</span><br><span class="line"></span><br><span class="line">// 更新本地分支</span><br><span class="line">git remote update origin</span><br><span class="line">// 更新本地分支</span><br><span class="line">git fetch</span><br><span class="line">// 更新本地分支</span><br><span class="line">// 可直接通过：拉取，推送 =&gt; 从所有远程存储库中拉取</span><br></pre></td></tr></table></figure>
 
 <h2 id="9-git-提交规范"><a href="#9-git-提交规范" class="headerlink" title="9.git 提交规范"></a>9.git 提交规范</h2><ul>
 <li>feat：添加新功能</li>
+<li>update：修改已有功能</li>
 <li>fix：bug 修复</li>
 <li>perf：代码优化</li>
-<li>style：样式改动</li>
+<li>style：样式修改</li>
+<li>text：文字修改</li>
 <li>docs：文档补充</li>
 <li>refactor：代码重构</li>
 <li>test：增加测试</li>
@@ -263,9 +264,18 @@
 <li>删除远程 tag：git push origin –delete xxx</li>
 </ul>
 <h2 id="11-版本回退"><a href="#11-版本回退" class="headerlink" title="11.版本回退"></a>11.版本回退</h2><ul>
+<li>可通过 vscode 查看 git log，选择历史提交记录，点击 hard 即可硬回退到指定提交位置</li>
+<li>取消上次 commit 暂存：git reset –soft HEAD^</li>
 <li>查看历史版本：git log</li>
 <li>本地回退到指定版本：git reset -q xxx</li>
 <li>远端同步：git push -f</li>
+</ul>
+<h2 id="12-查看-commit-改变"><a href="#12-查看-commit-改变" class="headerlink" title="12.查看 commit 改变"></a>12.查看 commit 改变</h2><ul>
+<li>找到对应的文件=&gt;右键 选中 Commit Changes=&gt;Open Changes With Branch or Tag=&gt; master</li>
+<li>确保每个修改都不会产生未知 bug</li>
+</ul>
+<h2 id="13-卸载-Xcode-后-git-无法使用"><a href="#13-卸载-Xcode-后-git-无法使用" class="headerlink" title="13.卸载 Xcode 后 git 无法使用"></a>13.卸载 Xcode 后 git 无法使用</h2><ul>
+<li>进入苹果开发者官网<a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">下载</a>Command Line Tools for Xcode 14.3 安装即可</li>
 </ul>
 
     </div>
@@ -314,7 +324,7 @@
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git-常用操作"><span class="toc-text">1.git 常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-分支操作"><span class="toc-text">2.分支操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-系统配置"><span class="toc-text">3.系统配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-版本回退"><span class="toc-text">4.版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-svn-常用操作"><span class="toc-text">5.svn 常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-vscode-内使用-svn"><span class="toc-text">6.vscode 内使用 svn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-其他"><span class="toc-text">7.其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-实际项目开发"><span class="toc-text">8.实际项目开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-git-提交规范"><span class="toc-text">9.git 提交规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-打-tag-标记"><span class="toc-text">10.打 tag 标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-版本回退"><span class="toc-text">11.版本回退</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-git-常用操作"><span class="toc-text">1.git 常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-分支操作"><span class="toc-text">2.分支操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-系统配置"><span class="toc-text">3.系统配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-版本回退"><span class="toc-text">4.版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-svn-常用操作"><span class="toc-text">5.svn 常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-vscode-内使用-svn"><span class="toc-text">6.vscode 内使用 svn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-其他"><span class="toc-text">7.其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-实际项目开发"><span class="toc-text">8.实际项目开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-git-提交规范"><span class="toc-text">9.git 提交规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-打-tag-标记"><span class="toc-text">10.打 tag 标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-版本回退"><span class="toc-text">11.版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-查看-commit-改变"><span class="toc-text">12.查看 commit 改变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-卸载-Xcode-后-git-无法使用"><span class="toc-text">13.卸载 Xcode 后 git 无法使用</span></a></li></ol>
         
     </div>
 </aside>

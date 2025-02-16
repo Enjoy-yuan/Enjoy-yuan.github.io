@@ -169,7 +169,7 @@
         
         <p class="fa fa-exclamation-triangle warning">
             本文于<strong>
-                1752</strong>
+                1753</strong>
             天之前发表，文中内容可能已经过时。
         </p>
         
@@ -191,14 +191,16 @@
 <li>查看帮助：npm help</li>
 <li>查看源地址：npm config list</li>
 <li>显示所有配置：npm config ls -l</li>
-<li>查看包信息：npm info <name></li>
+<li>查看包信息：npm info/view <name> (version/versions)</li>
+<li>指定使用 npm 包的版本号：npx -p npm@6 npm -v</li>
 <li><a href="https://docs.npmjs.com/" target="_blank" rel="noopener">完整的命令</a></li>
 </ul>
 <h2 id="2-设置源"><a href="#2-设置源" class="headerlink" title="2.设置源"></a>2.设置源</h2><ul>
-<li>安装 cnpm 淘宝源；npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
-<li>设置 npm 为淘宝源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+<li>安装 cnpm 淘宝源；npm install -g cnpm –registry=<a href="https://registry.npmmirror.com" target="_blank" rel="noopener">https://registry.npmmirror.com</a></li>
+<li>设置 npm 为淘宝源：npm config set registry <a href="https://registry.npmmirror.com" target="_blank" rel="noopener">https://registry.npmmirror.com</a></li>
 <li>npm 切回原地址：npm config set registry <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a></li>
 <li>查看当前源：npm config get registry</li>
+<li>旧淘宝源：<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
 </ul>
 <h2 id="3-npm-镜像源管理工具-nrm-的使用"><a href="#3-npm-镜像源管理工具-nrm-的使用" class="headerlink" title="3.npm 镜像源管理工具 nrm 的使用"></a>3.npm 镜像源管理工具 nrm 的使用</h2><ul>
 <li>全局安装：npm i -g nrm</li>
@@ -227,7 +229,7 @@
 <li>注意：同名的包一旦删除，需 24 小时后才能重新发布，包安装自身依赖将无法被删除</li>
 <li>实际开发中，npm 包应为单独的一个项目，默认发布整个项目文件</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"npmDemo"</span>, <span class="comment">// 发布的包名，不能和已有的重复</span></span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>, <span class="comment">// 发布的版本号，每次发布都需要修改</span></span><br><span class="line">  <span class="string">"description"</span>: <span class="string">""</span>, <span class="comment">// 包的描述</span></span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"1.js"</span>, <span class="comment">// 主入口文件</span></span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">false</span>, <span class="comment">// 设置为公有</span></span><br><span class="line">  <span class="string">"files"</span>: [] , <span class="comment">// 新添加，可在此处指定文件</span></span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">""</span>, <span class="comment">// 作者</span></span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"npmDemo"</span>: <span class="string">"^1.0.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// .npmignore</span></span><br><span class="line">/node_modules</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 文件引入，不可省略.vue后缀，否则找不到</span></span><br><span class="line"><span class="keyword">import</span> HeaderCom <span class="keyword">from</span> <span class="string">"yc-common/src/components/HeaderCom.vue"</span>;</span><br><span class="line"><span class="keyword">import</span>  <span class="string">"yc-common/1.js"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"yc-common"</span>, <span class="comment">// 发布的包名，不能和已有的重复</span></span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>, <span class="comment">// 发布的版本号，每次发布都需要修改</span></span><br><span class="line">  <span class="string">"description"</span>: <span class="string">""</span>, <span class="comment">// 包的描述</span></span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"1.js"</span>, <span class="comment">// 主入口文件，可选</span></span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">false</span>, <span class="comment">// 设置为公有</span></span><br><span class="line">  <span class="string">"files"</span>: [] , <span class="comment">// 新添加，可在此处指定文件</span></span><br><span class="line">  <span class="string">"author"</span>: <span class="string">""</span>, <span class="comment">// 作者</span></span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;&#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// .npmignore</span></span><br><span class="line">/node_modules</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 文件引入，不可省略.vue后缀，否则找不到</span></span><br><span class="line"><span class="keyword">import</span> HeaderCom <span class="keyword">from</span> <span class="string">"yc-common/src/components/HeaderCom.vue"</span>;</span><br><span class="line"><span class="keyword">import</span>  <span class="string">"yc-common/1.js"</span>;</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-yarn-的使用"><a href="#5-yarn-的使用" class="headerlink" title="5.yarn 的使用"></a>5.yarn 的使用</h2><ul>
 <li>yarn 安装全局包需要额外配置系统环境变量路径</li>
@@ -239,6 +241,14 @@
 <li>查看全局包：yarn global list</li>
 <li>查看当前源： yarn config get registry</li>
 <li>安装淘宝源：yarn config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+</ul>
+<h2 id="6-安装指定版本-node"><a href="#6-安装指定版本-node" class="headerlink" title="6.安装指定版本 node"></a>6.安装指定版本 node</h2><ul>
+<li>全局安装 n：npm install n -g</li>
+<li>查看安装的版本：n</li>
+<li>切换版本：n 版本号</li>
+<li>移除版本：n rm 版本号</li>
+<li>npm 版本不会跟随变化，需要手动安装对应的 npm 版本</li>
+<li>node12 对应：sudo npm install -g <a href="mailto:npm@6.9.0">npm@6.9.0</a></li>
 </ul>
 
     </div>
@@ -287,7 +297,7 @@
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-npm-基本命令"><span class="toc-text">1.npm 基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-设置源"><span class="toc-text">2.设置源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-npm-镜像源管理工具-nrm-的使用"><span class="toc-text">3.npm 镜像源管理工具 nrm 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-npm-发布自己的组件包"><span class="toc-text">4.npm 发布自己的组件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-yarn-的使用"><span class="toc-text">5.yarn 的使用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-npm-基本命令"><span class="toc-text">1.npm 基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-设置源"><span class="toc-text">2.设置源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-npm-镜像源管理工具-nrm-的使用"><span class="toc-text">3.npm 镜像源管理工具 nrm 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-npm-发布自己的组件包"><span class="toc-text">4.npm 发布自己的组件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-yarn-的使用"><span class="toc-text">5.yarn 的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-安装指定版本-node"><span class="toc-text">6.安装指定版本 node</span></a></li></ol>
         
     </div>
 </aside>
