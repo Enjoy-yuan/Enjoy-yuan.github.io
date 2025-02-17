@@ -191,6 +191,17 @@
 <li>通用=&gt;VPN 与设备管理=&gt;安装证书</li>
 <li>通用=&gt;关于手机=&gt;证书信任设置=&gt;设置信任</li>
 </ul>
+<h2 id="3-企业微信"><a href="#3-企业微信" class="headerlink" title="3.企业微信"></a>3.企业微信</h2><ul>
+<li>安装 npm 包：@wecom/jssdk</li>
+<li>先使用.register 初始化需要使用的 api</li>
+<li>使用.sendChatMessage 可发送微信小程序</li>
+<li>企业微信跳转到微信小程序链接需要添加.html</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = &#123;</span><br><span class="line">  msgtype: <span class="string">'miniprogram'</span>,</span><br><span class="line">  miniprogram: &#123;</span><br><span class="line">    appid: <span class="string">'wxbd501bbe890092e7'</span>, <span class="comment">// 小程序的appid，企业已关联的任一个小程序</span></span><br><span class="line">    title: <span class="string">'点击绑定领取永久10积分，提升教练排名'</span>, <span class="comment">// 小程序消息的title</span></span><br><span class="line">    imgUrl: <span class="string">'https://share-m.kakamobi.com/activity.kakamobi.com/jiaolianbaodian-wecom-customer-info/share.png'</span>, <span class="comment">// 小程序消息的封面图。必须带http或者https协议头，否则报错 $apiName$:fail invalid imgUrl</span></span><br><span class="line">    page: <span class="string">`pages/bindAuth/bindAuth.html?wechatUserId=<span class="subst">$&#123;wechatUserId&#125;</span>`</span> <span class="comment">// 手机上跳转需要加.html</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-兼容鸿蒙"><a href="#4-兼容鸿蒙" class="headerlink" title="4.兼容鸿蒙"></a>4.兼容鸿蒙</h2><ul>
+<li>当 url 上同一个参数被多次赋值时，不会默认取后一个值</li>
+</ul>
 
     </div>
     
@@ -232,7 +243,7 @@
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-wproxy-电脑设置代理"><span class="toc-text">1.wproxy 电脑设置代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-wproxy-手机设置代理"><span class="toc-text">2.wproxy 手机设置代理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-wproxy-电脑设置代理"><span class="toc-text">1.wproxy 电脑设置代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-wproxy-手机设置代理"><span class="toc-text">2.wproxy 手机设置代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-企业微信"><span class="toc-text">3.企业微信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-兼容鸿蒙"><span class="toc-text">4.兼容鸿蒙</span></a></li></ol>
         
     </div>
 </aside>
