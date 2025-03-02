@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="我的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="pattern" />
+
+
+<meta name="description" content="设计模式
+
+
+1.单例模式
+确保一个类只有一个实例，并且提供一个访问它的全局访问点
+
+1234567const Test = &#123;  name: 'apple'&#125;export ..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    pattern |
+    
+    我的博客
+</title>
+
+<link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='yuan'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                一路寂灭，一路超越
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        我的博客</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa fas fa-home"></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa fas fa-home"></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="pattern">
+            
+            pattern
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-link" href="/tags/pattern/" rel="tag">pattern</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2025/01/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>设计模式</p>
+<a id="more"></a>
+
+<h2 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1.单例模式"></a>1.单例模式</h2><ul>
+<li>确保一个类只有一个实例，并且提供一个访问它的全局访问点</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Test = &#123;</span><br><span class="line">  name: <span class="string">'apple'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Test <span class="keyword">from</span> <span class="string">'./index.js'</span></span><br><span class="line"><span class="built_in">console</span>.log(Test)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-构造器模式"><a href="#2-构造器模式" class="headerlink" title="2.构造器模式"></a>2.构造器模式</h2><ul>
+<li>定义一个通用的构造函数，然后方便多次传递参数调用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(productName) &#123;</span><br><span class="line">    <span class="keyword">this</span>.productName = productName</span><br><span class="line">  &#125;</span><br><span class="line">  getName() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.productName)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> test = <span class="keyword">new</span> Test(<span class="string">'apple'</span>)</span><br><span class="line">test.getName()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于，方法写在原型上可以节省内存</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Test</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name</span><br><span class="line">  <span class="keyword">this</span>.age = age</span><br><span class="line">&#125;</span><br><span class="line">Test.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-工厂模式"><a href="#3-工厂模式" class="headerlink" title="3.工厂模式"></a>3.工厂模式</h2><ul>
+<li>对代码逻辑进行封装，只暴露出通用接口直接调用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(productName) &#123;</span><br><span class="line">    <span class="keyword">this</span>.productName = productName</span><br><span class="line">  &#125;</span><br><span class="line">  getName() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.productName)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createProduct</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> Test(name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test1 = createProduct(<span class="string">'apple'</span>)</span><br><span class="line">test1.getName()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-装饰器模式"><a href="#4-装饰器模式" class="headerlink" title="4.装饰器模式"></a>4.装饰器模式</h2><ul>
+<li>不改动原函数的情况下动态扩展功能</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGreet</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`你好啊，<span class="subst">$&#123;name&#125;</span>!`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">welcomePrefix</span>(<span class="params">greetFunction</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'欢迎啊'</span>)</span><br><span class="line">    greetFunction(name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getGreet(<span class="string">'apple'</span>)</span><br><span class="line"><span class="keyword">const</span> setWelcome = welcomePrefix(getGreet)</span><br><span class="line">setWelcome(<span class="string">'apple'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-适配器模式"><a href="#5-适配器模式" class="headerlink" title="5.适配器模式"></a>5.适配器模式</h2><ul>
+<li>使某个类的接口有更强的适配性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receptacle</span> </span>&#123;</span><br><span class="line">  plugIn() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'110V 插座'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ForeignReceptacle</span> </span>&#123;</span><br><span class="line">  plugIn220V() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'220V 插座'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VoltageAdapter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(foreignReceptacle) &#123;</span><br><span class="line">    <span class="keyword">this</span>.foreignReceptacle = foreignReceptacle</span><br><span class="line">  &#125;</span><br><span class="line">  plugIn() &#123;</span><br><span class="line">    <span class="keyword">this</span>.foreignReceptacle.plugIn220V()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> receptacle = <span class="keyword">new</span> Receptacle()</span><br><span class="line">receptacle.plugIn()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foreignReceptacle = <span class="keyword">new</span> ForeignReceptacle()</span><br><span class="line"><span class="keyword">const</span> adapter = <span class="keyword">new</span> VoltageAdapter(foreignReceptacle)</span><br><span class="line">adapter.plugIn()</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-代理模式"><a href="#6-代理模式" class="headerlink" title="6.代理模式"></a>6.代理模式</h2><ul>
+<li>给某个对象加一个代理对象，代理对象起到中介作用</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">counterEvent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    setCount: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      count++</span><br><span class="line">    &#125;,</span><br><span class="line">    getCount: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> count</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">countProxy</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> newCounter = counterEvent()</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    setCount: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      newCounter.setCount()</span><br><span class="line">    &#125;,</span><br><span class="line">    getCount: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> newCounter.getCount()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myCounter = countProxy()</span><br><span class="line"></span><br><span class="line">myCounter.setCount()</span><br><span class="line">myCounter.setCount()</span><br><span class="line">myCounter.setCount()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(myCounter.getCount())</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-观察者模式"><a href="#7-观察者模式" class="headerlink" title="7.观察者模式"></a>7.观察者模式</h2><ul>
+<li>观察某个对象是否发生变化，如果发生变化就会通知所有订阅者，并做出相应操作，是一对一或一对多关系</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sub</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.observers = []</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  add(observer) &#123;</span><br><span class="line">    <span class="keyword">this</span>.observers.push(observer)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  unadd(observer) &#123;</span><br><span class="line">    <span class="keyword">this</span>.observers = <span class="keyword">this</span>.observers.filter(<span class="function"><span class="params">obs</span> =&gt;</span> obs !== observer)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  notify(msg) &#123;</span><br><span class="line">    <span class="keyword">this</span>.observers.forEach(<span class="function"><span class="params">observer</span> =&gt;</span> observer(msg))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> createObs = <span class="function"><span class="params">name</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;name&#125;</span> 收到: <span class="subst">$&#123;msg&#125;</span>`</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sub = <span class="keyword">new</span> Sub()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obs1 = createObs(<span class="string">'观察者1'</span>)</span><br><span class="line"><span class="keyword">const</span> obs2 = createObs(<span class="string">'观察者2'</span>)</span><br><span class="line"></span><br><span class="line">sub.add(obs1)</span><br><span class="line">sub.add(obs2)</span><br><span class="line"></span><br><span class="line">sub.notify(<span class="string">'你好鸭!'</span>)</span><br><span class="line"></span><br><span class="line">sub.unadd(obs1)</span><br><span class="line">sub.notify(<span class="string">'你好鸭！'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-发布订阅模式"><a href="#8-发布订阅模式" class="headerlink" title="8.发布订阅模式"></a>8.发布订阅模式</h2><ul>
+<li>多对多关系</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pub</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.subobj = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  subscribe(event, callback) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>.subobj[event]) &#123;</span><br><span class="line">      <span class="keyword">this</span>.subobj[event] = []</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.subobj[event].push(callback)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  unsubscribe(event, callback) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.subobj[event]) &#123;</span><br><span class="line">      <span class="keyword">this</span>.subobj[event] = <span class="keyword">this</span>.subobj[event].filter(<span class="function"><span class="params">cb</span> =&gt;</span> cb !== callback)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  publish(event, data) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.subobj[event]) &#123;</span><br><span class="line">      <span class="keyword">this</span>.subobj[event].forEach(<span class="function"><span class="params">callback</span> =&gt;</span> callback(data))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pub = <span class="keyword">new</span> Pub()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> subevent1 = <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`订阅者1 收到: <span class="subst">$&#123;msg&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> subevent2 = <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`订阅者2 收到: <span class="subst">$&#123;msg&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pub.subscribe(<span class="string">'greet'</span>, subevent1)</span><br><span class="line">pub.subscribe(<span class="string">'greet'</span>, subevent2)</span><br><span class="line"></span><br><span class="line">pub.publish(<span class="string">'greet'</span>, <span class="string">'你好鸭!'</span>)</span><br><span class="line"></span><br><span class="line">pub.unsubscribe(<span class="string">'greet'</span>, subevent1)</span><br><span class="line"></span><br><span class="line">pub.publish(<span class="string">'greet'</span>, <span class="string">'你好鸭!'</span>)</span><br></pre></td></tr></table></figure>
+
+    </div>
+    
+    <!-- <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div> -->
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+    <a href="/2024/12/01/wproxy/" class="next-post btn btn-default" title='wproxy'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            wproxy</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!-- 
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-单例模式"><span class="toc-text">1.单例模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-构造器模式"><span class="toc-text">2.构造器模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-工厂模式"><span class="toc-text">3.工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-装饰器模式"><span class="toc-text">4.装饰器模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-适配器模式"><span class="toc-text">5.适配器模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-代理模式"><span class="toc-text">6.代理模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-观察者模式"><span class="toc-text">7.观察者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-发布订阅模式"><span class="toc-text">8.发布订阅模式</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>
